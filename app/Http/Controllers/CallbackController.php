@@ -9,6 +9,7 @@ use Auth;
 use DB;
 use App\ApiClient;
 use App\Models\Token;
+use App\Models\Event;
 
 
 class CallbackController extends Controller
@@ -29,17 +30,25 @@ class CallbackController extends Controller
     ]);
 //Redirect_URL_OAut_zoom
     $token = json_decode($response->getBody()->getContents(), true);
+
     $user = new Token;
     $user->access_token = json_encode($token);
     $user->save();
 
     }
 
-    public function create_meeting(request $request) {
+    public function createMeting(request $request) {
 
-    $tpoic = $request->topic;
-    $type = $request->type;
-    $start_time = "2020-06-19T08:30:00";
+        return view('meeting.add');
+
+    }
+
+    public function storeMeeting(request $request)
+    {
+
+    $topic = $request->topic;
+    $type = 2;
+    $start_time =$request->start_time;
     $duration = $request->duration;
     $password = $request->password;
 
@@ -63,9 +72,17 @@ class CallbackController extends Controller
             ],
         ]);
 
-        dd($response);
-
         $data = json_decode($response->getBody());
+
+        $user = new Event;
+        $user->url_event = $data->join_url;
+        $user->deskripsi = $data->topic;
+        $user->durasi = $data->duration;
+        $user->mulai = $data->start_time;
+        $user->password = $data->password;
+        $user->status = 1;
+        $user->save();
+
         echo "Join URL: ". $data->join_url;
         echo "<br>";
         echo "Meeting Password: ". $data->password;
@@ -77,7 +94,7 @@ class CallbackController extends Controller
             $client = new GuzzleHttp\Client(['base_uri' => 'https://zoom.us']);
             $response = $client->request('POST', '/oauth/token', [
                 "headers" => [
-                    "Authorization" => "Basic ". base64_encode(env('client_id_zoom').':'.env('client_secret_zoom'))
+                    "Authorization" => "Basic ". base64_encode(env('CLIENT_ID_ZOOM').':'.env('CLIENT_SECRET_ZOOM'))
                 ],
                 'form_params' => [
                     "grant_type" => "refresh_token",
@@ -91,7 +108,8 @@ class CallbackController extends Controller
     }
 }
 
-    public function store(request $request)
+
+    public function getOauth(request $request)
     {
         return view('clientapi.oauth');
     }
