@@ -20,7 +20,7 @@
                 <option>--Pilih--</option>
                   @foreach($data as $key)
                 <option value="{{$key->id}}">
-                  {{$key->name}}
+                  {{$key->deskripsi}}
                 </option>
                   @endforeach
             </select>
