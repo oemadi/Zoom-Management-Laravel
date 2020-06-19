@@ -19,12 +19,12 @@ class CallbackController extends Controller
        $client = new Client(['base_uri' => 'https://zoom.us']);
        $response = $client->request('POST', '/oauth/token', [
         "headers" => [
-            "Authorization" => "Basic ". base64_encode(env('client_id_zoom').':'.env('client_secret_zoom'))
+            "Authorization" => "Basic ". base64_encode(env('CLIENT_ID_ZOOM').':'.env('CLIENT_SECRET_ZOOM'))
         ],
         'form_params' => [
             "grant_type" => "authorization_code",
             "code" => $_GET['code'],
-            "redirect_uri" => env('Redirect_URL_OAut_zoom')
+            "redirect_uri" => env('REDIRECT_URL_OAUTH_ZOOM')
         ],
     ]);
 
@@ -83,7 +83,7 @@ class CallbackController extends Controller
             $client = new GuzzleHttp\Client(['base_uri' => 'https://zoom.us']);
             $response = $client->request('POST', '/oauth/token', [
                 "headers" => [
-                    "Authorization" => "Basic ". base64_encode(env('client_id_zoom').':'.env('client_secret_zoom'))
+                    "Authorization" => "Basic ". base64_encode(env('CLIENT_ID_ZOOM').':'.env('CLIENT_SECRET_ZOOM'))
                 ],
                 'form_params' => [
                     "grant_type" => "refresh_token",

@@ -24,7 +24,7 @@
                 <div class="card-header"></div>
                 <div class="card-body">
                     <?php
-                      $url = "https://zoom.us/oauth/authorize?response_type=code&client_id=".env('client_id_zoom')."&redirect_uri=".env('Redirect_URL_OAut_zoom');
+                      $url = "https://zoom.us/oauth/authorize?response_type=code&client_id=".env('CLIENT_ID_ZOOM')."&redirect_uri=".env('REDIRECT_URL_OAUTH_ZOOM');
                     ?>
                     <button class="btn btn-info waves-effect waves-light m-r-10"><a href="<?php echo $url; ?>">GET OAUTH</a></button>
 
