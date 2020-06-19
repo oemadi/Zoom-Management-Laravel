@@ -74,14 +74,15 @@ class CallbackController extends Controller
 
         $data = json_decode($response->getBody());
 
-        // $user = new Event;
-        // $user->url_event = $data->join_url;
-        // $user->deskripsi = $data->topic;
-        // $user->durasi = $data->duration;
-        // $user->mulai = $data->start_time;
-        // $user->password = $data->password;
-        // $user->status = 1;
-        // $user->save();
+        $user = new Event;
+        $user->url_event = $data->join_url;
+        $user->deskripsi = $data->topic;
+        $user->durasi = $data->duration;
+        $user->mulai = $data->start_time;
+        $user->password = $data->password;
+        $user->status = 1;
+        $user->save();
+
         echo "Join URL: ". $data->join_url;
         echo "<br>";
         echo "Meeting Password: ". $data->password;
