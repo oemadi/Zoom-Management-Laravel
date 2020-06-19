@@ -15,6 +15,8 @@
         <div class="col-sm-6">
           <div class="white-box">
             <form class="form-horizontal" method="post" action="{{route('store_create')}}">
+             {{ csrf_field() }}
+
               <div class="form-group">
                 <label class="col-md-12">Topik</label>
                 <div class="col-md-12">
