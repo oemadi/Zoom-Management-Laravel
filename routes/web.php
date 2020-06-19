@@ -17,7 +17,7 @@ Route::get('/', function () {
 });
 
 Route::get('/oauth', 'CallbackController@getOauth')->name('oauth');
-Route::get('/callback', 'CallbackController@index')->name('call');
+Route::any('/callback', 'CallbackController@index')->name('call');
 
 Auth::routes();
 
