@@ -24,4 +24,4 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/create/meeting', 'CallbackController@createMeting')->name('meeting_create');
-Route::get('/store/meeting', 'CallbackController@storeMeeting')->name('store_create');
+Route::post('/store/meeting', 'CallbackController@storeMeeting')->name('store_create');
