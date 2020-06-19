@@ -11,45 +11,33 @@
         </ol>
       </div>
     </div>
-
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="white-box" >
-
-            <div class="box-body">
-             @if (Session::has('gagal'))
-              <div class="alert alert-danger alert-dismissable">{{ Session::get('gagal') }}
-              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-              </div>
-             @endif
-            </div>
-
-            <div class="box-body">
-             @if (Session::has('succes'))
-              <div class="alert alert-success alert-dismissable">{{ Session::get('succes') }}
-                   <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-               </div>
-             @endif
-            </div>
-            </div>
-        </div>
-      </div>
-
         <div class="row">
         <div class="col-sm-6">
           <div class="white-box">
-            <form class="form-horizontal" method="post" action="http://localhost/spp/guru/save">
+            <form class="form-horizontal" method="post" action="{{route('store_create')}}">
               <div class="form-group">
-                <label class="col-md-12">Nama</label>
+                <label class="col-md-12">Topik</label>
                 <div class="col-md-12">
-                  <input type="text" class="form-control" name="nama_guru">
+                  <input type="text" class="form-control" name="topic">
                 </div>
               </div>
 
               <div class="form-group">
-                <label class="col-md-12">Keterangan</label>
+                <label class="col-md-12">Start Time</label>
                 <div class="col-md-12">
-                  <input type="text" class="form-control" name="keterangan">
+                  <input type="text" class="form-control" name="start_time">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-md-12">Duration</label>
+                <div class="col-md-12">
+                  <input type="text" class="form-control" name="duration">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-md-12">Password</label>
+                <div class="col-md-12">
+                  <input type="text" class="form-control" name="password">
                 </div>
               </div>
                 <div class="form-actions">

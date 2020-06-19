@@ -45,11 +45,11 @@ class CallbackController extends Controller
     public function storeMeeting(request $request)
     {
 
-    $topic = "topik aza";
+    $topic = $request->topic;
     $type = 2;
-    $start_time = "2020-06-19T08:30:00";
-    $duration = 30;
-    $password = 123456;
+    $start_time =$request->start_time;
+    $duration = $request->duration;
+    $password = $request->password;
 
 
     $client = new Client(['base_uri' => 'https://api.zoom.us']);
