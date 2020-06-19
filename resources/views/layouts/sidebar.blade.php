@@ -36,7 +36,8 @@
         <li> <a href="{{ route('home')}}" class="waves-effect active"><i class="linea-icon linea-basic fa-fw" data-icon="v"></i> <span class="hide-menu"> Dashboard </span></a></li>
         <li><a href="javascript:void(0);" class="waves-effect"><i data-icon="F" class="linea-icon linea-software fa-fw"></i> <span class="hide-menu">Master<span class="fa arrow"></span></span></a>
           <ul class="nav nav-second-level">
-            <li> <a href="">List</a></li>
+            <li> <a href="{{route('oauth')}}">OAuth</a></li>
+            <li> <a href="{{route('meeting_create')}}">Create Meeting</a></li>
           </ul>
         </li>
 

@@ -29,19 +29,27 @@ class CallbackController extends Controller
     ]);
 
     $token = json_decode($response->getBody()->getContents(), true);
+
     $user = new Token;
     $user->access_token = json_encode($token);
     $user->save();
 
     }
 
-    public function create_meeting(request $request) {
+    public function createMeting(request $request) {
 
-    $tpoic = $request->topic;
-    $type = $request->type;
+        return view('meeting.add');
+
+    }
+
+    public function storeMeeting(request $request)
+    {
+
+    $topic = "topik aza";
+    $type = 2;
     $start_time = "2020-06-19T08:30:00";
-    $duration = $request->duration;
-    $password = $request->password;
+    $duration = 30;
+    $password = 123456;
 
 
     $client = new Client(['base_uri' => 'https://api.zoom.us']);
@@ -62,8 +70,6 @@ class CallbackController extends Controller
                 "password" => $password
             ],
         ]);
-
-        dd($response);
 
         $data = json_decode($response->getBody());
         echo "Join URL: ". $data->join_url;
@@ -91,7 +97,8 @@ class CallbackController extends Controller
     }
 }
 
-    public function store(request $request)
+
+    public function getOauth(request $request)
     {
         return view('clientapi.oauth');
     }
