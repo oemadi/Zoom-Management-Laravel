@@ -72,7 +72,7 @@ class CallbackController extends Controller
             ],
         ]);
 
-        // $data = json_decode($response->getBody());
+        $data = json_decode($response->getBody());
 
         // $user = new Event;
         // $user->url_event = $data->join_url;
