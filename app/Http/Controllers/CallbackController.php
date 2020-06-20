@@ -38,7 +38,7 @@ class CallbackController extends Controller
     $id=1;
     $user = Token::find($id);
     $user->access_token = json_encode($token);
-    $device->save();
+    $user->save();
    
     // Token::where('id', 1)
     //       ->update(['access_token' => json_encode($token)]);
