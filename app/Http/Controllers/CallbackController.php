@@ -36,7 +36,7 @@ class CallbackController extends Controller
    // $user->save();
   // $user = new Token;
     $id=1;
-    $device = Token::find($id);
+    $user = Token::find($id);
     $user->access_token = json_encode($token);
     $device->save();
    
