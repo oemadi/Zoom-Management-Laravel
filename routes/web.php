@@ -13,7 +13,7 @@
 
 
 Route::get('/', function () {
-    return view('auth.login');
+    return view('welcome');
 });
 
 Route::get('/oauth', 'CallbackController@getOauth')->name('oauth');
@@ -21,7 +21,7 @@ Route::get('/callback', 'CallbackController@index')->name('call');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+//Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/create/meeting', 'CallbackController@createMeting')->name('meeting_create');
 Route::post('/store/meeting', 'CallbackController@storeMeeting')->name('store_create');
