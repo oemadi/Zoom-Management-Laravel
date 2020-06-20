@@ -13,7 +13,7 @@
     <meta NAME="Rating" CONTENT="General">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Style -->
-    <link rel="shortcut icon" href="https://idwebhost.com/themes/freshblue/images/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="16x16" href="{{asset('public/images/favicon.png')}}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
     <link rel="stylesheet" href="{{ asset('public/css/main.css') }}">
 

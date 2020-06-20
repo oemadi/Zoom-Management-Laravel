@@ -20,17 +20,22 @@
 <!-- scripts -->
 </head>
 <!-- color CSS -->
-<body>
+<body style="background: #f9fcfe">
 <!-- Preloader -->
 <!-- <div class="preloader">
   <div class="cssload-speeding-wheel"></div>
 </div> -->
-<section id="wrapper" class="login-register">
+ <nav class="navbar navbar-expand-md navbar-light navbar-laravel" style="background: #d8d8d8;">
+    <div class="container">
+   </div>
+</nav>
+<div class="container">
+<section id="wrapper" class="">
   <div class="login-box">
-    <div class="white-box">
-
-      <form class="form-horizontal form-material" id="loginform" action="index.html">
-        <h3 class="box-title m-b-20">Sign In</h3>
+    <div class="white-box" style="margin-top: -20%;">
+       <form method="POST" action="{{ route('register') }}" aria-label="{{ __('Register') }}" class="form-horizontal form-material" >
+        @csrf
+        <h3 class="box-title m-b-20 text-center">Daftar</h3>
         <div class="form-group ">
           <div class="col-xs-12">
               <input id="nik" type="text" class="form-control{{ $errors->has('nik') ? ' is-invalid' : '' }}"
@@ -45,7 +50,7 @@
          <div class="form-group ">
           <div class="col-xs-12">
               <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}"
-               name="name" value="{{ old('name') }}" required autofocus placeholder="Nama">
+               name="name" value="{{ old('name') }}" required autofocus placeholder="Nama" autocomplete="off">
                  @if ($errors->has('name'))
                      <span class="invalid-feedback" role="alert">
                          <strong>{{ $errors->first('name') }}</strong>
@@ -66,8 +71,8 @@
         </div>
          <div class="form-group ">
           <div class="col-xs-12">
-              <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}"
-               name="alamat" value="{{ old('name') }}" required autofocus placeholder="Alamat">
+            <textarea class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}"
+               name="alamat" value="{{ old('name') }}" required autofocus placeholder="Alamat" rows="4" cols="50"></textarea>
                  @if ($errors->has('name'))
                      <span class="invalid-feedback" role="alert">
                          <strong>{{ $errors->first('name') }}</strong>
@@ -77,7 +82,7 @@
         </div>
         <div class="form-group ">
           <div class="col-xs-12">
-             <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required  autofocus placeholder="Email">
+             <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email"  required  autofocus placeholder="Alamat Email" autocomplete="off">
              @if ($errors->has('email'))
                  <span class="invalid-feedback" role="alert">
                      <strong>{{ $errors->first('email') }}</strong>
@@ -139,13 +144,14 @@
         </div>
         <div class="form-group m-b-0">
           <div class="col-sm-12 text-center">
-            <p>Already have an account? <a href="login.html" class="text-primary m-l-5"><b>Sign In</b></a></p>
+            <p>Sudah memiliki akun ? <a href="{{route('login')}}" class="text-primary m-l-5"><b>Log in</b></a></p>
           </div>
         </div>
       </form>
     </div>
   </div>
 </section>
+</div>
 <!-- jQuery -->
 <script src="{{url('public/plugins/jquery/dist/jquery.min.js')}}"></script>
 
