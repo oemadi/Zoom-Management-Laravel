@@ -2,12 +2,12 @@
 @section('content')
     <div class="row bg-title">
       <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-        <h4 class="page-title">List Meeting</h4>
+        <h4 class="page-title">Create Meeting</h4>
       </div>
       <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
         <ol class="breadcrumb">
           <li><a href="#">Dashboard</a></li>
-          <li class="active">List Meeting </li>
+          <li class="active">Create Meeting </li>
         </ol>
       </div>
     </div>
@@ -18,20 +18,20 @@
              {{ csrf_field() }}
 
               <div class="form-group">
-                <label class="col-md-12">Topik</label>
+                <label class="col-md-12">Deskripsi</label>
                 <div class="col-md-12">
                   <input type="text" class="form-control" name="topic">
                 </div>
               </div>
 
               <div class="form-group">
-                <label class="col-md-12">Start Time</label>
+                <label class="col-md-12">Mulai</label>
                 <div class="col-md-12">
                   <input type="text" class="form-control" name="start_time" value="2020-06-18T08:30:00">
                 </div>
               </div>
               <div class="form-group">
-                <label class="col-md-12">Duration</label>
+                <label class="col-md-12">Durasi</label>
                 <div class="col-md-12">
                   <input type="text" class="form-control" name="duration">
                 </div>
