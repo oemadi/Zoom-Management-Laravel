@@ -35,10 +35,10 @@ class CallbackController extends Controller
    // $user->access_token = json_encode($token);
    // $user->save();
   // $user = new Token;
-//    $id=1;
-//    $device = Token::find($id);
-//    $user->access_token = json_encode($token);
-//    $device->save();
+    $id=1;
+    $device = Token::find($id);
+    $user->access_token = json_encode($token);
+    $device->save();
    
     // Token::where('id', 1)
     //       ->update(['access_token' => json_encode($token)]);
@@ -126,6 +126,6 @@ class CallbackController extends Controller
 
     public function getOauth(request $request)
     {
-       // return view('clientapi.oauth');
+        return view('clientapi.oauth');
     }
 }
