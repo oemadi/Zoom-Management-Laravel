@@ -22,6 +22,10 @@
 <!-- color CSS -->
 <body style="background: #f9fcfe">
 <div class="container">
+    <div class="row">
+<div class="col-md-4">
+</div>
+ <div class="col-md-4">
 <div class="panel panel-info">
 <div class="panel-heading" style="text-align: center;">Login</div>
 <div class="panel-wrapper collapse in" aria-expanded="true">
@@ -59,6 +63,8 @@
  </div>
 </div>
 </div>
+</div>
+</div>
 </body>
 </html>
 <!-- jQuery -->
@@ -78,7 +84,7 @@
       margin-bottom: 15px;
       border: 1px solid #e4dfdf;
       margin: 5% auto 0;
-     width: 30%; }
+     width: 100%; }
      html {
     position: relative;
     min-height: 100%;

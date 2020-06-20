@@ -49,7 +49,7 @@ class CallbackController extends Controller
     $topic = $request->topic;
     $type = 2;
     $start_time =$request->start_time;
-    
+
     $start_time1 = substr($start_time,0,10);
     $start_time2 = substr($start_time,12,8);
     $start_time1_ina = $start_time1.' '.$start_time2;

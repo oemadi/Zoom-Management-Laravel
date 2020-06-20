@@ -13,7 +13,12 @@
 
 
 Route::get('/', function () {
+
+    if (Auth::check()) {
+    return view('home');
+    }else{
     return view('welcome');
+    }
 });
 
 Route::get('/oauth', 'CallbackController@getOauth')->name('oauth');
