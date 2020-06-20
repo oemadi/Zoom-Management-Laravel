@@ -1,95 +1,113 @@
-<!doctype html>
-<html lang="{{ app()->getLocale() }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <title>SELAMAT DATANG</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="revisit-after" content="2 days">
+    <meta name="robots" content="all,index,follow" />
+    <meta name="MSSmartTagsPreventParsing" content="TRUE">
+    <meta NAME="Distribution" CONTENT="Global">
+    <meta NAME="Rating" CONTENT="General">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Style -->
+    <link rel="shortcut icon" href="https://idwebhost.com/themes/freshblue/images/favicon.ico" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="{{ asset('public/css/main.css') }}">
 
-        <title>Laravel</title>
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+</head>
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
-                height: 100vh;
-                margin: 0;
-            }
+<body>
+    <header>
+            <h1>AUTOMATA WEBINAR</h1>
+    </header>
 
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
-                    @endauth
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
+    <content>
+        <div class="container">
+            <section class="banner">
+                <img src="{{ asset('public/images/img/webinar.png') }}" alt="Halo pengunjung website"/>
+            </section>
+              <div class="other-item-login">
+             <a class="button-login" href="{{route('login')}}" target="_blank">Login</a>
             </div>
+             <div class="other-item-login">
+             <a class="button-register" href="{{'register'}}" target="_blank">Daftar</a>
+            </div>
+
+          <!--   <section class="welcome">
+                <p>Akun hosting Anda sudah aktif!</p>
+                <p>Silakan ubah tampilan halaman ini agar menjadi website yang lebih menarik.</p>
+            </section> -->
+
+            <section class="step">
+                <h1><b>Dapatkan Banyak Keuntungan Webinar Bersama Kami</b></h1>
+                <div class="underline"></div>
+
+                <div class="step-item">
+                    <img src="{{asset('public/images/img/icon-desktop.png')}}" alt="" />
+                    <div class="step-desc">
+                        <h2>Jadwal Webinar dengan Mudah dan Praktis</h2>
+                        <p>Module Jadwal Terintegrasi dengan ZOOM</p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <img src="{{asset('public/images/img/icon-config.png')}}" alt="" />
+                    <div class="step-desc">
+                        <h2>Jangan Salah Pilih EO</h2>
+                        <p>Harga EO Webinar Kami Lebih Murah</p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <img src="{{asset('public/images/img/icon-design.png')}}" alt="" />
+                    <div class="step-desc">
+                        <h2>Absen Peserta Otomatis</h2>
+                        <p>Mudah dalam Manajemen Data Peserta</p>
+                    </div>
+                </div>
+
+            </section>
         </div>
-    </body>
+    </content>
+
+    <aside>
+        <div class="container">
+            <section class="contact">
+                <p>Silakan hubungi kami untuk konfirmasi</p>
+                <a class="button button-wa" href="https://api.whatsapp.com/send?phone=62" target="_blank">
+                    <i class="icon-whatsapp"></i>
+                    xxxxx81398
+                </a>
+            </section>
+        </div>
+    </aside>
+
+    <content>
+        <div class="container">
+            <section class="other">
+                <div class="other-item">
+                    <img src="{{asset('public/images/img/icon-promo.png')}}" alt="" />
+                    <p>Cek Promo disini</p>
+                    <a class="button" href="#" target="_blank">Lihat</a>
+                </div>
+
+                <div class="other-item">
+                    <img src="{{asset('public/images/img/icon-hosting.png')}}" alt="" />
+                    <p>Silahkan Order disini</p>
+                    <a class="button" href="#" target="_blank">Order</a>
+                </div>
+
+            </section>
+        </div>
+    </content>
+
+    <footer>
+        Terima kasih <a href="https://automataseminar.com/zoom/" target="_blank">automataseminar</a>
+    </footer>
+</div>
+</body>
 </html>
