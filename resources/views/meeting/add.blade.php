@@ -27,7 +27,7 @@
               <div class="form-group">
                 <label class="col-md-12">Start Time</label>
                 <div class="col-md-12">
-                  <input type="text" class="form-control" name="start_time">
+                  <input type="text" class="form-control" name="start_time" value="2020-06-18T08:30:00">
                 </div>
               </div>
               <div class="form-group">

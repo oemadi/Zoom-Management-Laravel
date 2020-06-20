@@ -49,6 +49,12 @@ class CallbackController extends Controller
     $topic = $request->topic;
     $type = 2;
     $start_time =$request->start_time;
+    
+    $start_time1 = substr($start_time,0,10);
+    $start_time2 = substr($start_time,12,8);
+    $start_time1_ina = $start_time1.' '.$start_time2;
+    $start_time1_usa = $start_time1.'T'.$start_time2;
+
     $duration = $request->duration;
     $password = $request->password;
 
@@ -66,7 +72,7 @@ class CallbackController extends Controller
             'json' => [
                 "topic" => $topic,
                 "type" => $type,
-                "start_time" => $start_time,
+                "start_time" => $start_time1_usa,
                 "duration" => $duration, // 30 mins
                 "password" => $password
             ],
@@ -78,7 +84,7 @@ class CallbackController extends Controller
         $user->url_event = $data->join_url;
         $user->deskripsi = $data->topic;
         $user->durasi = $data->duration;
-        $user->mulai = $data->start_time;
+        $user->mulai = $start_time1_ina;
         $user->password = $data->password;
         $user->status = 1;
         $user->save();
