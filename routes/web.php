@@ -38,4 +38,5 @@ Route::get('/join/add', 'JoineventController@add')->name('join_add');
 Route::post('/join/save', 'JoineventController@save')->name('join_save');
 Route::any('/join/event', 'JoineventController@index')->name('join_event');
 Route::get('/join/download', 'JoineventController@download')->name('join_report');
+// Route::get('/join/download/{id}', 'JoineventController@download')->name('join_report');
 Route::any('/list/user', 'UserController@index')->name('list_user');

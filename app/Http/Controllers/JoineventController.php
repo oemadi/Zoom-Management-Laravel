@@ -15,7 +15,7 @@ use App\Models\Eventuser;
 
 class JoineventController extends Controller
 {
-	
+
 	 public function __construct()
     {
         $this->middleware('auth');
@@ -44,14 +44,17 @@ class JoineventController extends Controller
     //     $data = json_decode($data);
     //     return view('event.list',['data'=>$data]);
     // }
+     // public function download(request $request ,$id)
      public function download()
      {
-		 
-		 //$nama = 'Abdul Aziz,S.Kom';
+
+		// $result = Eventuser::GetSerifikat($id);
+  //       $result = json_encode($result);
+        	 //$nama = 'Abdul Aziz,S.Kom';
 		 $event = 'Pelatihan Komputer Tingkat Profesional';
 		 $pt = 'PT. Automata info Nusantara';
 		 /*
-         
+
          $data=DB::table('events')
          ->join('user_event','events.id','user_event.id_event')
          ->select('events.id','events.password','events.url_event','events.id_meeting','events.deskripsi','events.mulai','events.durasi','user_event.status')
@@ -59,7 +62,7 @@ class JoineventController extends Controller
          ->get();
  */
          $nama = Auth::user()->name;
-		
+
          return view('report.sert',compact('nama','event','pt'));
      }
 public function index(Request $request)
