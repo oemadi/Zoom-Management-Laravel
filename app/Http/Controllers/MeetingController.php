@@ -1,10 +1,11 @@
 <?php
-
 namespace App\Http\Controllers;
-
 
 use Illuminate\Http\Request;
 use App\Models\Event;
+use GuzzleHttp\Exception\GuzzleException;
+use GuzzleHttp\Client;
+use DB;
 
 class MeetingController extends Controller
 {
@@ -118,12 +119,35 @@ class MeetingController extends Controller
     }
 
 
-    public function getDelete($id){
+    public function getDelete($id)
+    {
+        $data_event = Event::all();
+        $data_event = json_decode($data_event);
 
+        $push = [];
+        foreach ($data_event as $key )
+        {
+            if ($key->id == $id) {
+                $data['id_meeting'] = $key->id_meeting;
+                array_push($data, $push);
+            }
+        }
+
+        $delete_api = $data['id_meeting'];
+        $client = new Client(['base_uri' => 'https://api.zoom.us']);
+
+        $result = DB::table('token')->select('access_token')->first();
+        $arr_token = json_decode($result->access_token);
+        $accessToken = $arr_token->access_token;
+
+        $response = $client->request('DELETE', '/v2/meetings/'.$delete_api.'', [
+            "headers" => [
+                "Authorization" => "Bearer $accessToken"
+            ]
+        ]);
 
         $evn = Event::find($id);
         $evn->delete();
-
         return redirect('list/meeting');
 
     }
