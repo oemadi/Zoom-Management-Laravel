@@ -50,22 +50,11 @@
 
   <!-- Top Navigation -->
   <nav class="navbar navbar-default navbar-static-top m-b-0">
-    <div style="background: #350970;" class="navbar-header"> <a class="navbar-toggle hidden-sm hidden-md hidden-lg " href="javascript:void(0)" data-toggle="collapse" data-target=".navbar-collapse"><i class="ti-menu"></i></a>
+    <div style="background: #350970;" class="navbar-header"> 
+	<a class="navbar-toggle hidden-sm hidden-md hidden-lg " href="javascript:void(0)" data-toggle="collapse" data-target=".navbar-collapse"><i class="ti-menu"></i></a>
 
       <div style="background: #350970;" class="top-left-part">
-      <a class="logo" href="{{url('')}}"><b>
-
-        <span class="hidden-xs">
-          <!--This is dark logo text-->
-
-     <img src="{{url('')}}/public/images/logo_ionnex_big.png" alt="logo_ionnex_big.png" class="dark-logo" style=" vertical-align: baseline;
-    width: 100px;
-    margin-left: 60px;
-    margin-top: 10px;" />
-          <!--This is light logo text-->
-          <img src="{{url('')}}/public/images/eliteadmin-text-dark.png" alt="home" class="light-logo" />
-        </span>
-        </a>
+      <p class="text-center" style="padding-top:20px;font-weight:bold">AUTO EO</p>
       </div>
 
       <ul class="nav navbar-top-links navbar-left hidden-xs">
