@@ -27,7 +27,7 @@
         $user = Auth()->user();
                 @endphp
 
-        @if($user->otority == 0 )
+        @if($user->otority == 1 )
         <ul class="nav" id="side-menu">
             <li class="sidebar-search hidden-sm hidden-md hidden-lg">
                 <!-- input-group -->

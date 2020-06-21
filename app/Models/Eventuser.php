@@ -66,7 +66,7 @@ class Eventuser extends Model
         if(isset($page) == false){ $offset =0; }else{ $offset =$page-1; }
         if( $offset != '0'){ $offset = $lmt*$offset;}
 
-        if ($id_otority == 0) {
+        if ($id_otority == 1) {
 
           if ($start == "" ||  $end == "" )
           {
@@ -87,7 +87,7 @@ class Eventuser extends Model
                     ->limit($lmt)
                     ->get();
             }
-        }if($id_otority == 1) {
+        }if($id_otority == 0) {
 
           if ($start == "" ||  $end == "" )
           {
