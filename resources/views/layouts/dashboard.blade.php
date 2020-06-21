@@ -57,11 +57,11 @@
 
         <span class="hidden-xs">
           <!--This is dark logo text-->
-<!--
+
      <img src="{{url('')}}/public/images/logo_ionnex_big.png" alt="logo_ionnex_big.png" class="dark-logo" style=" vertical-align: baseline;
     width: 100px;
     margin-left: 60px;
-    margin-top: 10px;" /> -->
+    margin-top: 10px;" />
           <!--This is light logo text-->
           <img src="{{url('')}}/public/images/eliteadmin-text-dark.png" alt="home" class="light-logo" />
         </span>

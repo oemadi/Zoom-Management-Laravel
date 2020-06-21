@@ -6,7 +6,7 @@
         @guest
         @else
         <div class="dropdown user-pro-body">
-                <div><img src="{{url('')}}/public/images/eliteadmin-logo-dark.png" alt="user-img" class="img-circle"></div>
+                <div><img src="{{url('')}}/public/images/img/iconku.png" alt="user-img" class="img-circle"></div>
                 <a href="#" class="dropdown-toggle u-dropdown" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ $user->name }} <span class="caret"></span></a>
                     <ul class="dropdown-menu animated flipInY">
                         <li><a href="#"><i class="ti-user"></i> My Profile</a></li>
@@ -36,6 +36,7 @@
         <li> <a href="{{ route('home')}}" class="waves-effect active"><i class="linea-icon linea-basic fa-fw" data-icon="v"></i> <span class="hide-menu"> Dashboard </span></a></li>
         <li><a href="javascript:void(0);" class="waves-effect"><i data-icon="F" class="linea-icon linea-software fa-fw"></i> <span class="hide-menu">Master<span class="fa arrow"></span></span></a>
           <ul class="nav nav-second-level">
+            <li> <a href="{{route('list_user')}}">User</a></li>
             <li> <a href="{{route('oauth')}}">Get Token OAuth</a></li>
           </ul>
         </li>

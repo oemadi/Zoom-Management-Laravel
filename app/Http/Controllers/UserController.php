@@ -2,45 +2,30 @@
 
 namespace App\Http\Controllers;
 
+
 use Illuminate\Http\Request;
-use GuzzleHttp\Exception\GuzzleException;
-use GuzzleHttp\Client;
-use Auth;
-use DB;
-use App\ApiClient;
-use App\Models\Token;
 use App\Models\Event;
-use App\Models\Eventuser;
+use App\Models\user;
 
 
-class JoineventController extends Controller
+class UserController extends Controller
 {
-    public function add()
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
     {
-
-        $data = Event::all();
-
-        $data = json_decode($data);
-
-        return view('event.add',['data'=>$data]);
-
+        $this->middleware('auth');
     }
 
-
-    // public function index()
-    // {
-    //     $id_user = Auth::user()->id;
-    //     $data=DB::table('events')
-    //     ->join('user_event','events.id','user_event.id_event')
-    //     ->select('events.id','events.password','events.url_event','events.id_meeting','events.deskripsi','events.mulai','events.durasi','user_event.status')
-    //     ->where('user_event.id_user',$id_user)
-    //     ->get();
-
-    //     $data = json_decode($data);
-    //     return view('event.list',['data'=>$data]);
-    // }
-
-public function index(Request $request)
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index(Request $request)
     {
             $page = $request->page;
             $limit = $request->limit;
@@ -73,11 +58,11 @@ public function index(Request $request)
 
         switch ($request->halaman) {
             case "":
-                    $result =Eventuser::GetData($lmt,$request->page,$start,$end);
+                    $result =User::GetData($lmt,$request->page,$start,$end);
 
                     $data =  json_decode($result);
                     $data  = [
-                              "view" => view('ajax.ajax_event',
+                              "view" => view('ajax.ajax_user',
                               compact('data', 'page','limit'))->render(),
                   ];
 
@@ -87,7 +72,7 @@ public function index(Request $request)
                 $offset ='';
                 if(isset($request->page) == false){ $offset =0; }else{ $offset =$request->page; }
 
-                $result_total =Eventuser::TotalRow($start,$end);
+                $result_total =User::TotalRow($start,$end);
 
                 $result_total = json_decode(json_encode($result_total));
 
@@ -126,20 +111,8 @@ public function index(Request $request)
               return response()->json($data);
               }
 
-        return view('event.list');
-    }
 
-
-    public function save(request $request)
-    {
-        $user = auth()->user();
-        $id_event = $request->id_event;
-        $join_event = new Eventuser;
-        $join_event->id_user =  $user->id;
-        $join_event->id_event = $id_event;
-        $join_event->status = 1;
-        $join_event->save();
-        return redirect('join/event');
+        return view('user.list');
     }
 
 }

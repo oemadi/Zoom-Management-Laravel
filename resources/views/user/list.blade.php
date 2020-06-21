@@ -2,12 +2,12 @@
 @section('content')
     <div class="row bg-title">
       <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-        <h4 class="page-title">List Meeting</h4>
+        <h4 class="page-title">List User</h4>
       </div>
       <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
         <ol class="breadcrumb">
           <li><a href="#">Dashboard</a></li>
-          <li class="active">List Meeting </li>
+          <li class="active">List User </li>
         </ol>
       </div>
     </div>
@@ -90,7 +90,7 @@
 
         $.ajax({
             type: 'POST',
-            url : "{{route('join_event')}}",
+            url : "{{route('list_user')}}",
             data: {
                  start_date : start_date,
                  end_date : end_date,
@@ -105,7 +105,7 @@
             var starhalaman= 1;
               $.ajax({
                   type: 'POST',
-                  url : "{{route('join_event')}}",
+                  url : "{{route('list_user')}}",
                   data: {
                        halaman : starhalaman,
                        start_date : start_date,
