@@ -67,10 +67,7 @@ class CallbackController extends Controller
     $thn = $start_date_tgl[2];
     $startt = $thn.'-'.$tgl.'-'.$bln;
 
-    $start_date_jam = explode('/',$request->jam);
-    $blnj = $start_date_jam[0];
-    $tglj = $start_date_jam[1];
-    $startj = $blnj.'-'.$tglj;
+     $startj = $jam.':'.'00';
 
     // $start_time1 = substr($start_time,0,10);
     // $start_time2 = substr($start_time,11,8);
