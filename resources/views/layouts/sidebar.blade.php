@@ -22,6 +22,12 @@
             </div>
         @endguest
         </div>
+
+        @php
+        $user = Auth()->user();
+                @endphp
+
+        @if($user->otority == 0 )
         <ul class="nav" id="side-menu">
             <li class="sidebar-search hidden-sm hidden-md hidden-lg">
                 <!-- input-group -->
@@ -58,5 +64,26 @@
           </ul>
         </li>
         </ul>
+        @else
+              <ul class="nav" id="side-menu">
+            <li class="sidebar-search hidden-sm hidden-md hidden-lg">
+                <!-- input-group -->
+                <div class="input-group custom-search-form">
+                    <input type="text" class="form-control" placeholder="Search...">
+                    <span class="input-group-btn">
+                    <button class="btn btn-default" type="button"> <i class="fa fa-search"></i> </button>
+                    </span>
+                </div>
+                <!-- /input-group -->
+            </li>
+        <li> <a href="{{ route('home')}}" class="waves-effect active"><i class="linea-icon linea-basic fa-fw" data-icon="v"></i> <span class="hide-menu"> Dashboard </span></a></li>
+            <li><a href="javascript:void(0);" class="waves-effect"><i data-icon="F" class="linea-icon linea-software fa-fw"></i> <span class="hide-menu">Report<span class="fa arrow"></span></span></a>
+              <ul class="nav nav-second-level">
+                <li> <a href="#">Report Peserta</a></li>
+              </ul>
+            </li>
+        </ul>
+        @endif
+
     </div>
 </div>
