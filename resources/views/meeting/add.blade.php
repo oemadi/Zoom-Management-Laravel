@@ -20,7 +20,7 @@
               <div class="form-group">
                 <label class="col-md-12">Deskripsi</label>
                 <div class="col-md-12">
-                  <input type="text" class="form-control" name="topic">
+                  <input type="text" class="form-control" name="topic" required="">
                 </div>
               </div>
 
@@ -28,7 +28,7 @@
                 <label class="col-md-12">Tanggal</label>
                 <div class="col-md-12">
                 <div class="input-group">
-                 <input type="text" class="form-control mydatepicker" placeholder="mm/dd/yyyy" name="tgl">
+                 <input type="text" class="form-control mydatepicker" placeholder="dd/mm/yyyy" name="tgl" required="">
                     <span class="input-group-addon"><i class="icon-calender"></i></span> </div>
               </div>
               </div>
@@ -37,7 +37,7 @@
               <div class="col-lg-6">
                 <label class="col-md-12">Jam</label>
                 <div class="input-group clockpicker">
-                  <input type="text" class="form-control" name="jam">
+                  <input type="text" class="form-control" name="jam" required="">
                   <span class="input-group-addon"> <span class="glyphicon glyphicon-time"></span> </span> </div>
                 </div>
               </div>
@@ -46,13 +46,13 @@
               <div class="form-group">
                 <label class="col-md-12">Durasi</label>
                 <div class="col-md-12">
-                  <input type="text" class="form-control" name="duration">
+                  <input type="text" class="form-control" name="duration" required="">
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-md-12">Password</label>
                 <div class="col-md-12">
-                  <input type="text" class="form-control" name="password">
+                  <input type="text" class="form-control" name="password" required="">
                 </div>
               </div>
                 <div class="form-actions">
