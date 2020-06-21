@@ -7,7 +7,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="icon" type="image/png" sizes="16x16" href="{{url('')}}/public/images/favicon.png">
-<title>#</title>
+<title>automataseminar</title>
   <!-- CSRF Token -->
   <meta name="csrf-token" content="{{ csrf_token() }}">
 <!-- Bootstrap Core CSS -->
