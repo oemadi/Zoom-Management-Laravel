@@ -39,11 +39,11 @@ class CallbackController extends Controller
     $user = Token::find($id);
     $user->access_token = json_encode($token);
     $user->save();
-   
+
     // Token::where('id', 1)
     //       ->update(['access_token' => json_encode($token)]);
 
-    // 
+    //
     }
 
     public function createMeting(request $request) {
@@ -57,12 +57,25 @@ class CallbackController extends Controller
 
     $topic = $request->topic;
     $type = 2;
-    $start_time =$request->start_time;
+    // $start_time =$request->start_time;
+    $tgl =$request->tgl;
+    $jam =$request->jam;
 
-    $start_time1 = substr($start_time,0,10);
-    $start_time2 = substr($start_time,11,8);
-    $start_time1_ina = $start_time1.' '.$start_time2;
-    $start_time1_usa = $start_time1.'T'.$start_time2;
+    $start_date_tgl = explode('/',$request->tgl);
+    $bln = $start_date_tgl[0];
+    $tgl = $start_date_tgl[1];
+    $thn = $start_date_tgl[2];
+    $startt = $thn.'-'.$tgl.'-'.$bln;
+
+    $start_date_jam = explode('/',$request->tgl);
+    $blnj = $start_date_jam[0];
+    $tglj = $start_date_jam[1];
+    $startj = $blnj.'-'.$tglj;
+
+    // $start_time1 = substr($start_time,0,10);
+    // $start_time2 = substr($start_time,11,8);
+    $start_time1_ina = $startt.' '.$startj;
+    $start_time1_usa = $startt.'T'.$startj;
 
     $duration = $request->duration;
     $password = $request->password;

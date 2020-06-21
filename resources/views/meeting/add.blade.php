@@ -25,11 +25,24 @@
               </div>
 
               <div class="form-group">
-                <label class="col-md-12">Mulai</label>
+                <label class="col-md-12">Tanggal</label>
                 <div class="col-md-12">
-                  <input type="text" class="form-control" name="start_time" value="2020-06-18T08:30:00">
+                <div class="input-group">
+                 <input type="text" class="form-control mydatepicker" placeholder="mm/dd/yyyy" name="tgl">
+                    <span class="input-group-addon"><i class="icon-calender"></i></span> </div>
+              </div>
+              </div>
+
+              <div class="form-group">
+              <div class="col-lg-6">
+                <label class="col-md-12">Jam</label>
+                <div class="input-group clockpicker">
+                  <input type="text" class="form-control" name="jam">
+                  <span class="input-group-addon"> <span class="glyphicon glyphicon-time"></span> </span> </div>
                 </div>
               </div>
+
+
               <div class="form-group">
                 <label class="col-md-12">Durasi</label>
                 <div class="col-md-12">
@@ -50,5 +63,29 @@
           </div>
         </div>
       </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js" integrity="sha256-wS9gmOZBqsqWxgIVgA8Y9WcQOa7PgSIX+rPA0VL2rbQ=" crossorigin="anonymous"></script>
 
+<script type="text/javascript" src="{{url('')}}/public/plugins/clockpicker/dist/jquery-clockpicker.min.js"></script>
+
+<script type="text/javascript">
+    jQuery(function($) {
+    $('.clockpicker').clockpicker({
+        donetext: 'Done',
+    })
+
+});
+
+</script>
+<script type="text/javascript">
+
+    $(document).ready(function() {
+    //date
+     $('.mydatepicker').datepicker({
+      toggleActive: true,
+      format: 'dd/mm/yyyy'
+      });
+
+   });
+
+</script>
 @endsection

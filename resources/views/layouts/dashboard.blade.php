@@ -19,7 +19,7 @@
 <link href="{{url('')}}/public/plugins/bootstrap-datepicker/bootstrap-datepicker.min.css" rel="stylesheet" type="text/css" />
 <link href="{{url('')}}/public/plugins/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
 <link href="{{url('')}}/public/plugins/icheck/skins/all.css" rel="stylesheet">
-
+<link href="{{url('')}}/public/plugins/clockpicker/dist/jquery-clockpicker.min.css" rel="stylesheet">
 
 <!-- Menu CSS -->
 <link href="{{url('')}}/public/plugins/sidebar-nav/dist/sidebar-nav.min.css" rel="stylesheet">
@@ -50,7 +50,7 @@
 
   <!-- Top Navigation -->
   <nav class="navbar navbar-default navbar-static-top m-b-0">
-    <div style="background: #350970;" class="navbar-header"> 
+    <div style="background: #350970;" class="navbar-header">
 	<a class="navbar-toggle hidden-sm hidden-md hidden-lg " href="javascript:void(0)" data-toggle="collapse" data-target=".navbar-collapse"><i class="ti-menu"></i></a>
 
       <div style="background: #350970;" class="top-left-part">
@@ -117,19 +117,13 @@
 <script type="text/javascript" src="{{url('')}}/public/plugins/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
 <script type="text/javascript" src="{{url('')}}/public/plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
 <script src="{{url('')}}/public/plugins/summernote/dist/summernote.min.js"></script>
-
 <script src="{{url('')}}/public/plugins/icheck/icheck.min.js"></script>
 <script src="{{url('')}}/public/plugins/icheck/icheck.init.js"></script>
-
 <script src="{{url('')}}/public/js/cbpFWTabs.js"></script>
-
 <script type="text/javascript" src="{{url('')}}/public/js/dataTables.buttons.min.js"></script>
 <script type="text/javascript" src="{{url('')}}/public/js/jszip.min.js"></script>
 <script type="text/javascript" src="{{url('')}}/public/js/buttons.html5.min.js"></script>
 <script type="text/javascript" src="{{url('')}}/public/plugins/bootstrap-switch/bootstrap-switch.min.js"></script>
-
-
-
 </body>
 </html>
 
