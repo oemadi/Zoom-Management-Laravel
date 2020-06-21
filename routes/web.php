@@ -33,5 +33,7 @@ Route::get('/list/meeting', 'MeetingController@index')->name('meeting_list');
 Route::post('/store/meeting', 'CallbackController@storeMeeting')->name('store_create');
 
 Route::get('/delete/meeting/{id}', 'MeetingController@getDelete');
+
+Route::get('/join/add', 'JoineventController@add')->name('join_add');
+Route::post('/join/save', 'JoineventController@save')->name('join_save');
 Route::get('/join/event', 'JoineventController@index')->name('join_event');
-Route::post('/join/add', 'JoineventController@storeEvent')->name('join_add');

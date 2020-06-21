@@ -39,7 +39,9 @@
             <li> <a href="{{route('oauth')}}">OAuth</a></li>
             <li> <a href="{{route('meeting_create')}}">Create Meeting</a></li>
             <li> <a href="{{route('meeting_list')}}">List Meeting</a></li>
-            <li> <a href="{{route('join_event')}}">Join Event</a></li>
+
+            <li> <a href="{{route('join_add')}}">Create Join Event</a></li>
+            <li> <a href="{{route('join_event')}}">List Join Event</a></li>
           </ul>
         </li>
 

@@ -14,7 +14,7 @@
         <div class="row">
         <div class="col-sm-6">
           <div class="white-box">
-            <form class="form-horizontal" method="post" action="{{route('join_add')}}">
+            <form class="form-horizontal" method="post" action="{{route('join_save')}}">
              {{ csrf_field() }}
             <select name="id_event" class="form-control">
                 <option>--Pilih--</option>

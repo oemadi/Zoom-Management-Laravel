@@ -15,7 +15,7 @@ use App\Models\Eventuser;
 
 class JoineventController extends Controller
 {
-    public function index()
+    public function add()
     {
 
         $data = Event::all();
@@ -26,7 +26,19 @@ class JoineventController extends Controller
 
     }
 
-    public function storeEvent(request $request)
+ 
+    public function index()
+    {
+        
+        $data=DB::table('events')
+        ->join('user_event','events.id','user_event.id_event')
+        ->select('events.id_meeting','events.deskripsi','events.mulai','events.durasi','user_event.status')
+        ->get();
+
+        $data = json_decode($data);
+        return view('event.list',['data'=>$data]);
+    }
+    public function save(request $request)
     {
         $user = auth()->user();
         $id_event = $request->id_event;
@@ -38,7 +50,7 @@ class JoineventController extends Controller
         $join_event->id_event = $id_event;
         $join_event->status = 1;
         $join_event->save();
+        return redirect('join/event');
     }
-
 
 }

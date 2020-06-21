@@ -90,11 +90,19 @@ class CallbackController extends Controller
         $data = json_decode($response->getBody());
 
         $user = new Event;
+
+        $arr1 = explode('/',$data->join_url);
+        $ar1 = $arr1[4];
+        $arr2 = explode('?',$ar1);
+        $ar2 = $arr2[0];
+        $id_meeting= $ar2;
+
         $user->url_event = $data->join_url;
         $user->deskripsi = $data->topic;
         $user->durasi = $data->duration;
         $user->mulai = $start_time1_ina;
         $user->password = $data->password;
+        $user->id_meeting = $id_meeting;
         $user->status = 1;
         $user->save();
         return redirect('list/meeting');
