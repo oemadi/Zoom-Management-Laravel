@@ -119,7 +119,7 @@ class Eventuser extends Model
 
 
     }
-
+}
 //      public function scopeGetDataId($query,$lmt,$page,$start,$end)
 //     {
 //         $id_user = Auth::user()->id;
