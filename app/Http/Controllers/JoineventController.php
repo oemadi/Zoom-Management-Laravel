@@ -29,10 +29,11 @@ class JoineventController extends Controller
  
     public function index()
     {
-        
+        $id_user = Auth::user()->id;
         $data=DB::table('events')
         ->join('user_event','events.id','user_event.id_event')
         ->select('events.id','events.password','events.url_event','events.id_meeting','events.deskripsi','events.mulai','events.durasi','user_event.status')
+        ->where('user_event.id_user',$id_user)
         ->get();
 
         $data = json_decode($data);
