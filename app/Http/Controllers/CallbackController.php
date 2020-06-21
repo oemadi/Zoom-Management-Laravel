@@ -97,10 +97,10 @@ class CallbackController extends Controller
         $user->password = $data->password;
         $user->status = 1;
         $user->save();
-
-        echo "Join URL: ". $data->join_url;
-        echo "<br>";
-        echo "Meeting Password: ". $data->password;
+        return redirect('list/meeting');
+        // echo "Join URL: ". $data->join_url;
+        // echo "<br>";
+        // echo "Meeting Password: ". $data->password;
 
     } catch(Exception $e) {
         if( 401 == $e->getCode() ) {

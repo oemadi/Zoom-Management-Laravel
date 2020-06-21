@@ -21,6 +21,7 @@
                         <th scope="col">Mulai</th>
                         <th scope="col">Deskripsi</th>
                         <th scope="col">Meeting ID</th>
+                        <th scope="col">Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -38,6 +39,7 @@
                         <td>{{$key->mulai}}</td>
                         <td>{{$key->deskripsi}}</td>
                         <td>{{$id_meeting}}</td>
+                        <td><a href="{{ url('delete/meeting', $key->id) }}" class="btn btn-info">Delete</a></td>
                     </tr>
                     
                    <?php

@@ -29,4 +29,13 @@ class MeetingController extends Controller
         $data = json_decode($data);
         return view('meeting.list',['data'=>$data]);
     }
+    public function getDelete($id){
+
+
+        $evn = Event::find($id);
+        $evn->delete();
+
+        return redirect('list/meeting');
+
+    }
 }
