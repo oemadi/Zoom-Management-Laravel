@@ -32,7 +32,7 @@ class JoineventController extends Controller
         
         $data=DB::table('events')
         ->join('user_event','events.id','user_event.id_event')
-        ->select('events.id_meeting','events.deskripsi','events.mulai','events.durasi','user_event.status')
+        ->select('events.id','events.password','events.url_event','events.id_meeting','events.deskripsi','events.mulai','events.durasi','user_event.status')
         ->get();
 
         $data = json_decode($data);

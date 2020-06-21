@@ -21,6 +21,7 @@
                         <th scope="col">Mulai</th>
                         <th scope="col">Deskripsi</th>
                         <th scope="col">Meeting ID</th>
+                        <th scope="col">Password</th>
                         <th scope="col">Action</th>
                         </tr>
                     </thead>
@@ -34,7 +35,8 @@
                         <td>{{$key->mulai}}</td>
                         <td>{{$key->deskripsi}}</td>
                         <td>{{$key->id_meeting}}</td>
-                        <td><a href="{{ url('join/event', $key->id) }}" class="btn btn-info">Join</a></td>
+                        <td>{{$key->password}}</td>
+                        <td><a target="_blank" href="{{ url($key->url_event) }}" class="btn btn-info">Join</a></td>
                     </tr>
                     
                    <?php
