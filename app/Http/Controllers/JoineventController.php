@@ -39,7 +39,24 @@ class JoineventController extends Controller
     //     $data = json_decode($data);
     //     return view('event.list',['data'=>$data]);
     // }
-
+     public function download()
+     {
+		 
+		 //$nama = 'Abdul Aziz,S.Kom';
+		 $event = 'Pelatihan Komputer Tingkat Profesional';
+		 $pt = 'PT. Automata info Nusantara';
+		 /*
+         
+         $data=DB::table('events')
+         ->join('user_event','events.id','user_event.id_event')
+         ->select('events.id','events.password','events.url_event','events.id_meeting','events.deskripsi','events.mulai','events.durasi','user_event.status')
+         ->where('user_event.id_user',$id_user)
+         ->get();
+ */
+         $nama = Auth::user()->name;
+		
+         return view('report.sert',compact('nama','event','pt'));
+     }
 public function index(Request $request)
     {
             $page = $request->page;
