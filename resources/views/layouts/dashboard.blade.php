@@ -127,8 +127,8 @@
 <script type="text/javascript" src="{{url('')}}/public/js/buttons.html5.min.js"></script>
 <script type="text/javascript" src="{{url('')}}/public/plugins/bootstrap-switch/bootstrap-switch.min.js"></script>
 <script src="{{url('')}}/public/js/sweetalert2.all.js"></script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    @include('sweet::alert')
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
 
 </body>
 </html>
