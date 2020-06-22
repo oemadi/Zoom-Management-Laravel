@@ -15,9 +15,8 @@ class Eventuser extends Model
 
    protected $table = 'user_event';
 
-
-     public function scopeTotalRow($query,$start,$end)
-    {
+   public function scopeTotalRow($query,$start,$end)
+   {
         $start  = $start.'-'.'00 '.'00:00:00';
         $end = $end.'-'.'12 '.'23:59:59';
 

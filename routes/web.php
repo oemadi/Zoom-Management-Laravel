@@ -40,3 +40,10 @@ Route::any('/join/event', 'JoineventController@index')->name('join_event');
 Route::get('/join/download', 'JoineventController@download')->name('join_report');
 // Route::get('/join/download/{id}', 'JoineventController@download')->name('join_report');
 Route::any('/list/user', 'UserController@index')->name('list_user');
+Route::any('/list/sertifikat', 'SertifikatController@index')->name('list_sertifikat');
+Route::any('/sertifikat/add', 'SertifikatController@add')->name('add_sertifikat');
+Route::any('/sertifikat/store', 'SertifikatController@store')->name('store_sertifikat');
+Route::get('/sertifikat/edit/{id}', 'SertifikatController@edit')->name('edit_sertifikat');
+Route::put('/sertifikat/update/{id}', 'SertifikatController@update')->name('update_sertifikat');
+Route::get('/delete/sertifikat/{id}', 'SertifikatController@destroy')->name('delete_sertifikat');
+

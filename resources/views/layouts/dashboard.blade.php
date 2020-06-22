@@ -20,6 +20,7 @@
 <link href="{{url('')}}/public/plugins/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
 <link href="{{url('')}}/public/plugins/icheck/skins/all.css" rel="stylesheet">
 <link href="{{url('')}}/public/plugins/clockpicker/dist/jquery-clockpicker.min.css" rel="stylesheet">
+<link href="{{url('')}}/public/plugins/sweetalert/sweetalert.css" rel="stylesheet">
 
 <!-- Menu CSS -->
 <link href="{{url('')}}/public/plugins/sidebar-nav/dist/sidebar-nav.min.css" rel="stylesheet">
@@ -67,12 +68,11 @@
   </nav>
 
       @include('layouts.sidebar')
-
-
   <!-- Page Content -->
   <div id="page-wrapper" >
     <div class="container-fluid">
       <!-- .row -->
+
         @yield('content')
 
     <footer class="footer text-center"> 2020 &copy; Admin  </footer>
@@ -100,6 +100,8 @@
 <!--Wave Effects -->
 <script src="{{url('')}}/public/js/waves.js"></script>
 <!-- Custom Theme JavaScript -->
+<script src="{{url('')}}/public/plugins/sweetalert/sweetalert.min.js"></script>
+<script src="{{url('')}}/public/plugins/sweetalert/jquery.sweet-alert.custom.js"></script>
 <script src="{{url('')}}/public/js/custom.min.js"></script>
 
  <script src="{{url('')}}/public/plugins/datatables/jquery.dataTables.min.js"></script>
@@ -124,6 +126,10 @@
 <script type="text/javascript" src="{{url('')}}/public/js/jszip.min.js"></script>
 <script type="text/javascript" src="{{url('')}}/public/js/buttons.html5.min.js"></script>
 <script type="text/javascript" src="{{url('')}}/public/plugins/bootstrap-switch/bootstrap-switch.min.js"></script>
+<script src="{{url('')}}/public/js/sweetalert2.all.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    @include('sweet::alert')
+
 </body>
 </html>
 

@@ -58,6 +58,12 @@
             <li> <a href="{{route('join_event')}}">List Join Event</a></li>
           </ul>
         </li>
+          <li><a href="javascript:void(0);" class="waves-effect"><i data-icon="F" class="linea-icon linea-software fa-fw"></i> <span class="hide-menu">Sertifikat<span class="fa arrow"></span></span></a>
+          <ul class="nav nav-second-level">
+            <li> <a href="{{route('add_sertifikat')}}">Create Sertifikat</a></li>
+            <li> <a href="{{route('list_sertifikat')}}">List Sertifikat</a></li>
+          </ul>
+        </li>
         <li><a href="javascript:void(0);" class="waves-effect"><i data-icon="F" class="linea-icon linea-software fa-fw"></i> <span class="hide-menu">Report<span class="fa arrow"></span></span></a>
           <ul class="nav nav-second-level">
             <li> <a href="#">Report Peserta</a></li>
