@@ -26,8 +26,8 @@ class Sertifikat extends Model
         if ($start == ""  ||  $end == "" )
         {
            return $query
-                    ->where('created_at', '>=', $tgl_str_new)
-                    ->where('created_at', '<=', $tgl_end_new)
+                    // ->where('created_at', '>=', $tgl_str_new)
+                    // ->where('created_at', '<=', $tgl_end_new)
                     ->count('ID');
         }else{
 
@@ -64,7 +64,7 @@ class Sertifikat extends Model
       {
         return $query
              ->selectRaw(DB::raw('id,title_1,title_2,title_3,title_4,title_5,title_6,image,status'))
-                 ->whereBetween('created_at', [$tgl_str_new,$tgl_end_new])
+                 // ->whereBetween('created_at', [$tgl_str_new,$tgl_end_new])
                 ->offset($offset)
                 ->limit($lmt)
                 ->get();
