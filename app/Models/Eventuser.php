@@ -82,7 +82,7 @@ class Eventuser extends Model
                       return DB::table('events')
                      ->select('events.id','events.password','events.url_event','events.id_meeting','events.deskripsi','events.mulai','events.durasi','user_event.status')
                      ->join('user_event','events.id','user_event.id_event')
-                    // ->whereBetween('user_event.created_at', [$start,$end])
+                    ->whereBetween('user_event.created_at', [$start,$end])
                     ->offset($offset)
                     ->limit($lmt)
                     ->get();
@@ -97,7 +97,6 @@ class Eventuser extends Model
                      ->join('users','user_event.id_user','users.id')
                     ->where('user_event.id_user',$id_user)
                     ->where('users.otority',$id_otority)
-
                     ->whereBetween('user_event.created_at', [$tgl_str_new,$tgl_end_new])
                     ->offset($offset)
                     ->limit($lmt)
