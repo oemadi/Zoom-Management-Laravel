@@ -7,7 +7,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="icon" type="image/png" sizes="16x16" href="{{asset('public/images/favicon.png')}}">
-<title>Daftar</title>
+<title>SELAMAT DATANG</title>
   <!-- CSRF Token -->
 <meta name="csrf-token" content="{{ csrf_token() }}">
 <!-- Bootstrap Core CSS -->
