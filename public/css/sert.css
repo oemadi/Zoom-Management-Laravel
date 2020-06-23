@@ -2,7 +2,7 @@ html,body{
 	/*Hilangkan white space pada browser*/
 	margin:0 0 0 0;
 	padding:0 0 0 0;
-	
+
 	width:80%;
 	height:auto;
 }
@@ -15,48 +15,48 @@ html,body{
 	z-index:2; /* Header berada 2 tingkat diatas TAG DIV lainnya */
 }
 #judul{
-	
+
 	position:relative;
 	font-size:42px;
 	text-align:center;
 	margin-top:150px;
 }
 #judul2{
-	
+
 	position:relative;
 	font-size:36px;
 	text-align:center;
-	
+
 }
 #judul3{
-	
+
 	position:relative;
 	font-size:36px;
 	text-align:center;
-	
+
 }
 
 #judul4{
-	
+
 	position:relative;
 	font-size:36px;
 	text-align:center;
-	
+
 }
 #judul5{
-	
+
 	position:relative;
 	font-size:36px;
 	text-align:center;
-	
+
 }
 #content{
-	 margin: auto;
+	 margin: 2px;
   width: 1112px;
   border: 3px solid green;
-  padding: 10px;
+  padding: 0px;
 	background-image:url("https://automatawebinar.com/zoom/public/images/sertifikat/43902-2020-06-24-01-55-51.png");
-    height:780px;
+    height:760px;
 
 	   background-repeat: no-repeat;
 
@@ -66,7 +66,7 @@ html,body{
          font-family: "Font Retrow Mentho";
          src: url('https://automatawebinar.com/zoom/public/fonts/Retrow-Mentho.ttf');
          }
- 
+
    .mentho {
          font-family: "Font Retrow Mentho";
          }

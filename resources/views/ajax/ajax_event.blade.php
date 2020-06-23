@@ -30,10 +30,10 @@
 
 						<td>
 						<a target="_blank" href="{{ url($key->url_event) }}" class="btn btn-info">Join</a> |
-<!--                         <a href="{{ route('join_report', $key->id) }}" class="btn btn-info">Sertifikat</a></td>
- -->
-                        <a target="_blank" href="{{ url('/join/download') }}" class="btn btn-info">Sertifikat</a>
+                        <a href="{{ route('join_report_pdf', $key->id) }}" class="btn btn-info">Pdf</a></td>
 
+<!--                         <a target="_blank" href="{{ url('/join/download') }}" class="btn btn-info">Sertifikat</a>
+ -->
 </td>
                      </tr>
                 @endforeach

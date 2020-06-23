@@ -11,6 +11,7 @@ use App\ApiClient;
 use App\Models\Token;
 use App\Models\Event;
 use App\Models\Eventuser;
+use PDF;
 
 
 class JoineventController extends Controller
@@ -154,5 +155,16 @@ class JoineventController extends Controller
         $join_event->save();
         return redirect('join/event');
     }
+
+       public function pdf($id)
+      {
+         $event = 'Pelatihan Komputer Tingkat Profesional';
+         $pt = 'PT. Automata info Nusantara';
+        $nama = Auth::user()->name;
+        $footballer = Eventuser::find($id);
+        $pdf = PDF::loadView('emails.pdf', compact('nama','event','pt'));
+            $pdf->setPaper('A4', 'landscape');
+        return $pdf->download('sertifikat.pdf');
+      }
 
 }

@@ -51,6 +51,7 @@ Route::post('/join/save', 'JoineventController@save')->name('join_save');
 Route::any('/join/event', 'JoineventController@index')->name('join_event');
 Route::get('/join/download', 'JoineventController@download')->name('join_report');
 // Route::get('/join/download/{id}', 'JoineventController@download')->name('join_report');
+Route::get('/join/pdf/{id}', 'JoineventController@pdf')->name('join_report_pdf');
 Route::any('/list/user', 'UserController@index')->name('list_user');
 Route::any('/user/check/{id}', 'UserController@checkvalidasi')->name('check_validasi');
 
