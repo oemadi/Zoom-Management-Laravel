@@ -35,7 +35,7 @@
  @csrf
     <div class="form-group ">
       <div class="col-xs-12">
-       <input id="nik" type="nik" class="form-control{{ $errors->has('nik') ? ' is-invalid' : '' }}" name="nik" value="{{ old('nik') }}" placeholder="Masukkan Email"  required autofocus>
+       <input id="nik" type="nik" class="form-control{{ $errors->has('nik') ? ' is-invalid' : '' }}" name="nik" value="{{ old('nik') }}" placeholder="Masukkan Nik"  required autofocus>
             @if ($errors->has('nik'))
              <span class="invalid-feedback" role="alert">
              {{ $errors->first('nik') }}
