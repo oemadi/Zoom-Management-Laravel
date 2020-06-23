@@ -46,6 +46,12 @@
             <li> <a href="{{route('oauth')}}">Get Token OAuth</a></li>
           </ul>
         </li>
+		<li><a href="javascript:void(0);" class="waves-effect"><i data-icon="F" class="linea-icon linea-software fa-fw"></i> <span class="hide-menu">Sertifikat<span class="fa arrow"></span></span></a>
+          <ul class="nav nav-second-level">
+            <li> <a href="{{route('add_sertifikat')}}">Create Sertifikat</a></li>
+            <li> <a href="{{route('list_sertifikat')}}">List Sertifikat</a></li>
+          </ul>
+        </li>
         <li><a href="javascript:void(0);" class="waves-effect"><i data-icon="F" class="linea-icon linea-software fa-fw"></i> <span class="hide-menu">Jadwal<span class="fa arrow"></span></span></a>
           <ul class="nav nav-second-level">
             <li> <a href="{{route('meeting_create')}}">Create Meeting</a></li>
@@ -58,17 +64,8 @@
             <li> <a href="{{route('join_event')}}">List Join Event</a></li>
           </ul>
         </li>
-          <li><a href="javascript:void(0);" class="waves-effect"><i data-icon="F" class="linea-icon linea-software fa-fw"></i> <span class="hide-menu">Sertifikat<span class="fa arrow"></span></span></a>
-          <ul class="nav nav-second-level">
-            <li> <a href="{{route('add_sertifikat')}}">Create Sertifikat</a></li>
-            <li> <a href="{{route('list_sertifikat')}}">List Sertifikat</a></li>
-          </ul>
-        </li>
-        <li><a href="javascript:void(0);" class="waves-effect"><i data-icon="F" class="linea-icon linea-software fa-fw"></i> <span class="hide-menu">Report<span class="fa arrow"></span></span></a>
-          <ul class="nav nav-second-level">
-            <li> <a href="#">Report Peserta</a></li>
-          </ul>
-        </li>
+          
+        <li><a href="{{ __('Logout')}}" class="waves-effect"><i class="linea-icon linea-basic fa-fw" data-icon="v"></i> <span class="hide-menu"> Logout </span></a></li>
         </ul>
         @else
               <ul class="nav" id="side-menu">
