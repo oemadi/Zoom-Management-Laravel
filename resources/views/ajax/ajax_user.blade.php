@@ -36,7 +36,7 @@
                     <tr>
                         <td colspan="12">
                             <div style="display: table;height: 250px;width: 100%;">
-                                <h3 style="display: table-cell;vertical-align: middle;text-align: center;" class="hobby_travel-color">Not Found! </h3>
+                                <h3 style="display: table-cell;vertical-align: middle;text-align: center;" class="hobby_travel-color">Data Kosong!</h3>
                             </div>
                         </td>
                     </tr>
