@@ -27,6 +27,13 @@
 </div>
  <div class="col-md-6">
 <div class="panel panel-info">
+      <div class="box-body">
+             @if (Session::has('ckosong'))
+              <div class="alert alert-danger alert-dismissable">{{ Session::get('ckosong') }}
+              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+              </div>
+             @endif
+            </div>
             <div class="panel-heading" style="text-align: center;">Daftar</div>
             <div class="panel-wrapper collapse in" aria-expanded="true">
               <div class="panel-body">
@@ -54,7 +61,7 @@
                  @endif
           </div>
         </div>
-    
+
         <div class="form-group ">
           <div class="col-xs-12">
              <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email"  required  autofocus placeholder="Email" autocomplete="off">

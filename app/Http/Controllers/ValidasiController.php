@@ -19,4 +19,10 @@ class CekValidasiController extends Controller
         session()->flash('succes','Silahkan cek Email Anda');
         return redirect('login');
     }
+
+    public function ceklogin(request $request)
+    {
+        return redirect('register');
+
+    }
 }

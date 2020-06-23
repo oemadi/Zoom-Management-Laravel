@@ -10,6 +10,8 @@ use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
 use Auth;
+use Session;
+
 
 class RegisterController extends Controller
 {
@@ -24,24 +26,24 @@ class RegisterController extends Controller
     |
     */
 
-    use RegistersUsers;
+    // use RegistersUsers;
 
     /**
      * Where to redirect users after registration.
      *
      * @var string
      */
-    protected $redirectTo = '/login';
+    // protected $redirectTo = '/login';
 
     /**
      * Create a new controller instance.
      *
      * @return void
      */
-    public function __construct()
-    {
-        $this->middleware('guest');
-    }
+    // public function __construct()
+    // {
+    //     $this->middleware('guest');
+    // }
 
     /**
      * Get a validator for an incoming registration request.
@@ -49,6 +51,11 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \Illuminate\Contracts\Validation\Validator
      */
+
+     public function showRegistrationForm()
+    {
+        return view('auth.register');
+    }
     protected function validator(array $data)
     {
         return Validator::make($data, [
@@ -59,19 +66,14 @@ class RegisterController extends Controller
     }
 
 
-     public function register(Request $request)
+    public function register(Request $request)
     {
-
-        $this->validator($request->all())->validate();
-
-        event(new Registered($user = $this->create($request->all())));
-
-        $this->guard()->login($user);
-
-       $this->registered($request, $user);
-        return view('auth.login');
-
-
+      $this->validator($request->all())->validate();
+      event(new Registered($user = $this->create($request->all())));
+      $this->guard()->login($user);
+      $this->registered($request, $user);
+      session()->flash('succes','Mohon cek email !');
+      return view('auth.register');
     }
 
      protected function guard()
@@ -92,6 +94,8 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+
+        // $password = $data['password'];
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],

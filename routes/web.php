@@ -33,6 +33,8 @@ Route::get('/', function () {
 Route::get('/oauth', 'CallbackController@getOauth')->name('oauth');
 Route::get('/callback', 'CallbackController@index')->name('call');
 Route::get('/validasi/{id}', 'CekValidasiController@index')->name('valid');
+// Route::get('/valid', 'CekValidasiController@ceklogin')->name('check_login');
+// Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
 
 Auth::routes();
 

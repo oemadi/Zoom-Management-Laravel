@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use Auth;
 use Session;
+use Illuminate\Validation\ValidationException;
 
 class LoginController extends Controller
 {
@@ -21,7 +22,6 @@ class LoginController extends Controller
     | to conveniently provide its functionality to your applications.
     |
     */
-
     use AuthenticatesUsers;
 
     /**
@@ -29,42 +29,30 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+        protected $redirectTo = '/home';
 
     /**
      * Create a new controller instance.
      *
      * @return void
      */
-    public function __construct()
-    {
-        $this->middleware('guest')->except('logout');
-    }
+    // public function __construct()
+    // {
+    //     $this->middleware('guest')->except('logout');
+    // }
+
+      public function showLoginForm()
+       {
+        return view('auth.login');
+       }
 
        public function login(Request $request)
     {
         $this->validateLogin($request);
 
          $email = $request->email;
-         $users =  \App\Models\User::where('email',$email)->first();
-         $users = json_decode($users);
-         // $users_status = $users->status;
-         // $users_email = $users->email;
 
-         if (empty($users)) {
-         session()->flash('ckosong','user atau email salah / Akun Belum Terverivikasi Mohon cek Email Anda!');
-         return view('auth.login');
-         }
-
-        if ($users->status == 0)
-        {
-        session()->flash('check','user atau email salah / Akun Belum Terverivikasi Mohon cek Email Anda!');
-        return view('auth.login');
-
-        }
-            else
-        {
-                // If the class is using the ThrottlesLogins trait, we can automatically throttle
+        // If the class is using the ThrottlesLogins trait, we can automatically throttle
 
         // the login attempts for this application. We'll key this by the username and
         // the IP address of the client making these requests into this application.
@@ -82,7 +70,7 @@ class LoginController extends Controller
         // to login and redirect the user back to the login form. Of course, when this
         // user surpasses their maximum number of attempts they will get locked out.
         $this->incrementLoginAttempts($request);
-    }
+
 
         return $this->sendFailedLoginResponse($request);
     }
@@ -175,7 +163,7 @@ class LoginController extends Controller
      */
     public function username()
     {
-        return 'email';
+        return 'nik';
     }
 
     /**

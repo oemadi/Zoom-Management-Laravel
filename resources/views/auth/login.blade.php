@@ -30,42 +30,15 @@
 <div class="panel-heading" style="text-align: center;">Login</div>
 <div class="panel-wrapper collapse in" aria-expanded="true">
 <div class="panel-body">
-            <div class="box-body">
-             @if (Session::has('ckosong'))
-              <div class="alert alert-danger alert-dismissable">{{ Session::get('ckosong') }}
-              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-              </div>
-             @endif
-            </div><div class="box-body">
-             @if (Session::has('gagal'))
-              <div class="alert alert-danger alert-dismissable">{{ Session::get('gagal') }}
-              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-              </div>
-             @endif
-            </div>
-            <div class="box-body">
-             @if (Session::has('check'))
-              <div class="alert alert-danger alert-dismissable">{{ Session::get('check') }}
-              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-              </div>
-             @endif
-            </div>
 
-            <div class="box-body">
-             @if (Session::has('succes'))
-              <div class="alert alert-success alert-dismissable">{{ Session::get('succes') }}
-                   <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-               </div>
-             @endif
-            </div>
 <form method="POST" action="{{ route('login') }}" aria-label="{{ __('Login') }}" class="form-horizontal form-material">
  @csrf
     <div class="form-group ">
       <div class="col-xs-12">
-       <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" placeholder="Masukkan Email"  required autofocus>
-            @if ($errors->has('email'))
+       <input id="nik" type="nik" class="form-control{{ $errors->has('nik') ? ' is-invalid' : '' }}" name="nik" value="{{ old('nik') }}" placeholder="Masukkan Email"  required autofocus>
+            @if ($errors->has('nik'))
              <span class="invalid-feedback" role="alert">
-             {{ $errors->first('email') }}
+             {{ $errors->first('nik') }}
              </span>
             @endif
       </div>
