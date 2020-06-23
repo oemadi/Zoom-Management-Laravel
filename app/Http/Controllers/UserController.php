@@ -6,10 +6,6 @@ use App\Models\Event;
 use App\Models\User;
 use Session;
 use Illuminate\Support\Facades\Hash;
-use Mavinoo\Batch\Batch;
-
-
-
 
 class UserController extends Controller
 {

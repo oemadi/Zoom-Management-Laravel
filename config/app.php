@@ -160,7 +160,6 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         App\Providers\HelperServiceProvider::class,
-        Mavinoo\Batch\BatchServiceProvider::class,
 
 
 
@@ -213,7 +212,6 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Helper' => App\Helpers\Helper::class,
-        'Batch' => Mavinoo\Batch\BatchFacade::class,
     ],
 
 ];
