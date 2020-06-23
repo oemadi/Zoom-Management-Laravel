@@ -37,6 +37,13 @@
               </div>
              @endif
             </div>
+            <div class="box-body">
+             @if (Session::has('check'))
+              <div class="alert alert-danger alert-dismissable">{{ Session::get('check') }}
+              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+              </div>
+             @endif
+            </div>
 
             <div class="box-body">
              @if (Session::has('succes'))
