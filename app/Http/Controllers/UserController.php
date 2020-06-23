@@ -26,24 +26,24 @@ class UserController extends Controller
      */
     public function index(Request $request)
     {
-        $data_event = User::all();
-        $data_event = json_decode($data_event);
-        $push = [];
+        // $data_event = User::all();
+        // $data_event = json_decode($data_event);
+        // $push = [];
 
-        foreach ($data_event as $key  )
-        {
-                $has = substr($key->nik, 0,8);
-                $data['id'] = $key->id;
-                $data['password'] = Hash::make($has);
-                array_push($push, $data);
-        }
+        // foreach ($data_event as $key  )
+        // {
+        //         $has = substr($key->nik, 0,8);
+        //         $data['id'] = $key->id;
+        //         $data['password'] = Hash::make($has);
+        //         array_push($push, $data);
+        // }
 
-                $has_input = $push;
-                foreach($has_input as $row){
-                $has_input = User::find($row['id']);
-                $has_input->password = $row['password'];
-                $has_input->save();
-            }
+        //         $has_input = $push;
+        //         foreach($has_input as $row){
+        //         $has_input = User::find($row['id']);
+        //         $has_input->password = $row['password'];
+        //         $has_input->save();
+        //     }
 
             $page = $request->page;
             $limit = $request->limit;
