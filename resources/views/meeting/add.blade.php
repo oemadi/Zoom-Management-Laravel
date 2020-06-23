@@ -2,12 +2,12 @@
 @section('content')
     <div class="row bg-title">
       <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-        <h4 class="page-title">List Meeting</h4>
+        <h4 class="page-title">Create Meeting</h4>
       </div>
       <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
         <ol class="breadcrumb">
           <li><a href="#">Dashboard</a></li>
-          <li class="active">List Meeting </li>
+          <li class="active">Create Meeting </li>
         </ol>
       </div>
     </div>
@@ -18,28 +18,41 @@
              {{ csrf_field() }}
 
               <div class="form-group">
-                <label class="col-md-12">Topik</label>
+                <label class="col-md-12">Deskripsi</label>
                 <div class="col-md-12">
-                  <input type="text" class="form-control" name="topic">
+                  <input type="text" class="form-control" name="topic" required="">
                 </div>
               </div>
 
               <div class="form-group">
-                <label class="col-md-12">Start Time</label>
+                <label class="col-md-12">Tanggal</label>
                 <div class="col-md-12">
-                  <input type="text" class="form-control" name="start_time">
+                <div class="input-group">
+                 <input type="text" class="form-control mydatepicker" placeholder="dd/mm/yyyy" name="tgl" required="">
+                    <span class="input-group-addon"><i class="icon-calender"></i></span> </div>
+              </div>
+              </div>
+
+              <div class="form-group">
+              <div class="col-lg-6">
+                <label class="col-md-12">Jam</label>
+                <div class="input-group clockpicker">
+                  <input type="text" class="form-control" name="jam" required="">
+                  <span class="input-group-addon"> <span class="glyphicon glyphicon-time"></span> </span> </div>
                 </div>
               </div>
+
+
               <div class="form-group">
-                <label class="col-md-12">Duration</label>
+                <label class="col-md-12">Durasi</label>
                 <div class="col-md-12">
-                  <input type="text" class="form-control" name="duration">
+                  <input type="text" class="form-control" name="duration" required="">
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-md-12">Password</label>
                 <div class="col-md-12">
-                  <input type="text" class="form-control" name="password">
+                  <input type="text" class="form-control" name="password" required="">
                 </div>
               </div>
                 <div class="form-actions">
@@ -50,5 +63,29 @@
           </div>
         </div>
       </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js" integrity="sha256-wS9gmOZBqsqWxgIVgA8Y9WcQOa7PgSIX+rPA0VL2rbQ=" crossorigin="anonymous"></script>
 
+<script type="text/javascript" src="{{url('')}}/public/plugins/clockpicker/dist/jquery-clockpicker.min.js"></script>
+
+<script type="text/javascript">
+    jQuery(function($) {
+    $('.clockpicker').clockpicker({
+        donetext: 'Done',
+    })
+
+});
+
+</script>
+<script type="text/javascript">
+
+    $(document).ready(function() {
+    //date
+     $('.mydatepicker').datepicker({
+      toggleActive: true,
+      format: 'dd/mm/yyyy'
+      });
+
+   });
+
+</script>
 @endsection

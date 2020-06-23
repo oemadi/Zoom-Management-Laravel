@@ -1,0 +1,63 @@
+html,body{
+	/*Hilangkan white space pada browser*/
+	margin:0 0 0 0;
+	padding:0 0 0 0;
+	
+	width:80%;
+	height:auto;
+}
+#header{
+	width:100td_persen; /* Lebar header full pada browser */
+	height:100px;
+	border-bottom:silver 1px solid;
+	position:fixed; /* Membuat posisi header statis */
+	background-color:#ff9900;
+	z-index:2; /* Header berada 2 tingkat diatas TAG DIV lainnya */
+}
+#judul{
+	
+	position:relative;
+	font-size:42px;
+	text-align:center;
+	margin-top:150px;
+}
+#judul2{
+	
+	position:relative;
+	font-size:36px;
+	text-align:center;
+	
+}
+#judul3{
+	
+	position:relative;
+	font-size:36px;
+	text-align:center;
+	
+}
+
+#judul4{
+	
+	position:relative;
+	font-size:36px;
+	text-align:center;
+	
+}
+#judul5{
+	
+	position:relative;
+	font-size:36px;
+	text-align:center;
+	
+}
+#content{
+	 margin: auto;
+  width: 1112px;
+  border: 3px solid green;
+  padding: 10px;
+	background-image:url("https://oemadi.web.id/pemeliharaan/uploads/sertifikat55.jpg");
+    height:780px;
+
+	   background-repeat: no-repeat;
+
+}

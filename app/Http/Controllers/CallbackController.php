@@ -31,10 +31,19 @@ class CallbackController extends Controller
 //Redirect_URL_OAut_zoom
     $token = json_decode($response->getBody()->getContents(), true);
 
-    $user = new Token;
+    //$user = new Token;
+   // $user->access_token = json_encode($token);
+   // $user->save();
+  // $user = new Token;
+    $id=1;
+    $user = Token::find($id);
     $user->access_token = json_encode($token);
     $user->save();
 
+    // Token::where('id', 1)
+    //       ->update(['access_token' => json_encode($token)]);
+
+    //
     }
 
     public function createMeting(request $request) {
@@ -48,7 +57,23 @@ class CallbackController extends Controller
 
     $topic = $request->topic;
     $type = 2;
-    $start_time =$request->start_time;
+    // $start_time =$request->start_time;
+    $tgl =$request->tgl;
+    $jam =$request->jam;
+
+    $start_date_tgl = explode('/',$request->tgl);
+    $bln = $start_date_tgl[0];
+    $tgl = $start_date_tgl[1];
+    $thn = $start_date_tgl[2];
+    $startt = $thn.'-'.$tgl.'-'.$bln;
+
+     $startj = $jam.':'.'00';
+
+    // $start_time1 = substr($start_time,0,10);
+    // $start_time2 = substr($start_time,11,8);
+    $start_time1_ina = $startt.' '.$startj;
+    $start_time1_usa = $startt.'T'.$startj;
+
     $duration = $request->duration;
     $password = $request->password;
 
@@ -66,7 +91,7 @@ class CallbackController extends Controller
             'json' => [
                 "topic" => $topic,
                 "type" => $type,
-                "start_time" => $start_time,
+                "start_time" => $start_time1_usa,
                 "duration" => $duration, // 30 mins
                 "password" => $password
             ],
@@ -75,17 +100,25 @@ class CallbackController extends Controller
         $data = json_decode($response->getBody());
 
         $user = new Event;
+
+        $arr1 = explode('/',$data->join_url);
+        $ar1 = $arr1[4];
+        $arr2 = explode('?',$ar1);
+        $ar2 = $arr2[0];
+        $id_meeting= $ar2;
+
         $user->url_event = $data->join_url;
         $user->deskripsi = $data->topic;
         $user->durasi = $data->duration;
-        $user->mulai = $data->start_time;
+        $user->mulai = $start_time1_ina;
         $user->password = $data->password;
+        $user->id_meeting = $id_meeting;
         $user->status = 1;
         $user->save();
-
-        echo "Join URL: ". $data->join_url;
-        echo "<br>";
-        echo "Meeting Password: ". $data->password;
+        return redirect('list/meeting');
+        // echo "Join URL: ". $data->join_url;
+        // echo "<br>";
+        // echo "Meeting Password: ". $data->password;
 
     } catch(Exception $e) {
         if( 401 == $e->getCode() ) {

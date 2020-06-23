@@ -7,6 +7,9 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Auth\Events\Registered;
+use Illuminate\Http\Request;
+use Auth;
 
 class RegisterController extends Controller
 {
@@ -28,7 +31,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/login';
 
     /**
      * Create a new controller instance.
@@ -55,6 +58,32 @@ class RegisterController extends Controller
         ]);
     }
 
+
+     public function register(Request $request)
+    {
+
+        $this->validator($request->all())->validate();
+
+        event(new Registered($user = $this->create($request->all())));
+
+        $this->guard()->login($user);
+
+       $this->registered($request, $user);
+        return view('auth.login');
+
+
+    }
+
+     protected function guard()
+    {
+        return Auth::guard();
+    }
+
+    protected function registered(Request $request, $user)
+    {
+        check_register($user);
+    }
+
     /**
      * Create a new user instance after a valid registration.
      *
@@ -67,10 +96,8 @@ class RegisterController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'nik' => $data['nik'],
-            'hp' => $data['hp'],
-            'alamat' => $data['alamat'],
-            'usia' => $data['usia'],
-            'tahun_kerja_terakhir' => $data['tahun_kerja_terakhir'],
+            'jabatan' => $data['jabatan'],
+            'instansi' => $data['instansi'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);

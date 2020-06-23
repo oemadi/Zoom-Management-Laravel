@@ -7,9 +7,9 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="icon" type="image/png" sizes="16x16" href="{{asset('public/images/favicon.png')}}">
-<title>Dashboard</title>
+<title>Daftar</title>
   <!-- CSRF Token -->
-  <meta name="csrf-token" content="{{ csrf_token() }}">
+<meta name="csrf-token" content="{{ csrf_token() }}">
 <!-- Bootstrap Core CSS -->
 <link href="{{url('public/bootstrap/dist/css/bootstrap.min.css')}}" rel="stylesheet">
 <!-- animation CSS -->
@@ -20,61 +20,83 @@
 <!-- scripts -->
 </head>
 <!-- color CSS -->
-<body>
+<body style="background: #f9fcfe">
+<div class="container">
+    <div class="row">
+<div class="col-md-4">
+</div>
+ <div class="col-md-4">
+<div class="panel panel-info">
+<div class="panel-heading" style="text-align: center;">Login</div>
+<div class="panel-wrapper collapse in" aria-expanded="true">
+<div class="panel-body">
+            <div class="box-body">
+             @if (Session::has('ckosong'))
+              <div class="alert alert-danger alert-dismissable">{{ Session::get('ckosong') }}
+              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+              </div>
+             @endif
+            </div><div class="box-body">
+             @if (Session::has('gagal'))
+              <div class="alert alert-danger alert-dismissable">{{ Session::get('gagal') }}
+              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+              </div>
+             @endif
+            </div>
+            <div class="box-body">
+             @if (Session::has('check'))
+              <div class="alert alert-danger alert-dismissable">{{ Session::get('check') }}
+              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+              </div>
+             @endif
+            </div>
 
-<section id="wrapper" class="login-register" >
-  <form method="POST" action="{{ route('login') }}" aria-label="{{ __('Login') }}">
+            <div class="box-body">
+             @if (Session::has('succes'))
+              <div class="alert alert-success alert-dismissable">{{ Session::get('succes') }}
+                   <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+               </div>
+             @endif
+            </div>
+<form method="POST" action="{{ route('login') }}" aria-label="{{ __('Login') }}" class="form-horizontal form-material">
  @csrf
-  <div class="login-box">
-    <div class="white-box" style="background-color: #4f5467; color: white; border: 1px solid #7c6d6d">
-      <form  class="form-horizontal form-material" id="loginform" action="index.html">
-        <h3 class="box-title m-b-20 text-center" style="color: white;">Login</h3>
-
-        <div class="form-group ">
-          <div class="col-xs-12">
-           <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" placeholder="Masukkan Email"  required autofocus>
+    <div class="form-group ">
+      <div class="col-xs-12">
+       <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" placeholder="Masukkan Email"  required autofocus>
             @if ($errors->has('email'))
              <span class="invalid-feedback" role="alert">
              {{ $errors->first('email') }}
              </span>
             @endif
-           </div>
-        </div>
-
-        <div class="form-group">
-          <div class="col-xs-12">
-            <input  autocomplete="off"  id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" placeholder="Masukkan Password" name="password" required>
+      </div>
+    </div>
+     <div class="form-group ">
+       <div class="col-xs-12">
+         <input  autocomplete="off"  id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" placeholder="Masukkan Password" name="password" required>
             @if ($errors->has('password'))
              <span class="invalid-feedback" role="alert">
              <strong>{{ $errors->first('password') }}</strong>
              </span>
              @endif
-         </div>
+          </div>
         </div>
-
-
-
-    <div class="form-group">
-      <button class="btn btn-primary submit-btn btn-block" type="submit" style="border-radius:0px;">Login</button>
-    </div>
- </div>
+         <div class="form-group">
+          <button class="btn btn-info submit-btn btn-block" type="submit" style="border-radius:0px;">Login</button>
+        </div>
      </div>
-
-
+     </div>
       </form>
-
     </div>
-  </div>
-</form>
-</section>
+   </div>
+ </div>
+</div>
+</div>
+</div>
 </div>
 </body>
 </html>
-
-
-
+<!-- jQuery -->
 <script src="{{url('public/plugins/jquery/dist/jquery.min.js')}}"></script>
-
 <!-- Bootstrap Core JavaScript -->
 <script src="{{url('public/bootstrap/dist/js/bootstrap.min.js')}}"></script>
 <!-- Menu Plugin JavaScript -->
@@ -84,21 +106,16 @@
 <!--Wave Effects -->
 <!-- Custom Theme JavaScript -->
 <script src="{{url('public/js/custom.min.js')}}"></script>
-<!--Style Switcher -->
-
 <style type="text/css">
- .form-control
-  {
- margin-bottom: 20px;
- }
-
- .login-register {
-    background: #574d4d52;
-    height: 100%;
-    position: fixed;
-}
-img {
-    vertical-align: middle;
-    height: 35px;
+    .panel {
+     border-radius: 0;
+      margin-bottom: 15px;
+      border: 1px solid #e4dfdf;
+      margin: 5% auto 0;
+     width: 100%; }
+     html {
+    position: relative;
+    min-height: 100%;
+    background: #f9fcfe;
 }
 </style>

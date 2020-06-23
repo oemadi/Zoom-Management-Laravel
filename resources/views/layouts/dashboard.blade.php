@@ -7,7 +7,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="icon" type="image/png" sizes="16x16" href="{{url('')}}/public/images/favicon.png">
-<title>#</title>
+<title>automataseminar</title>
   <!-- CSRF Token -->
   <meta name="csrf-token" content="{{ csrf_token() }}">
 <!-- Bootstrap Core CSS -->
@@ -19,7 +19,8 @@
 <link href="{{url('')}}/public/plugins/bootstrap-datepicker/bootstrap-datepicker.min.css" rel="stylesheet" type="text/css" />
 <link href="{{url('')}}/public/plugins/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
 <link href="{{url('')}}/public/plugins/icheck/skins/all.css" rel="stylesheet">
-
+<link href="{{url('')}}/public/plugins/clockpicker/dist/jquery-clockpicker.min.css" rel="stylesheet">
+<link href="{{url('')}}/public/plugins/sweetalert/sweetalert.css" rel="stylesheet">
 
 <!-- Menu CSS -->
 <link href="{{url('')}}/public/plugins/sidebar-nav/dist/sidebar-nav.min.css" rel="stylesheet">
@@ -50,22 +51,11 @@
 
   <!-- Top Navigation -->
   <nav class="navbar navbar-default navbar-static-top m-b-0">
-    <div style="background: #350970;" class="navbar-header"> <a class="navbar-toggle hidden-sm hidden-md hidden-lg " href="javascript:void(0)" data-toggle="collapse" data-target=".navbar-collapse"><i class="ti-menu"></i></a>
+    <div style="background: #350970;" class="navbar-header">
+	<a class="navbar-toggle hidden-sm hidden-md hidden-lg " href="javascript:void(0)" data-toggle="collapse" data-target=".navbar-collapse"><i class="ti-menu"></i></a>
 
       <div style="background: #350970;" class="top-left-part">
-      <a class="logo" href="{{url('')}}"><b>
-
-        <span class="hidden-xs">
-          <!--This is dark logo text-->
-<!--
-     <img src="{{url('')}}/public/images/logo_ionnex_big.png" alt="logo_ionnex_big.png" class="dark-logo" style=" vertical-align: baseline;
-    width: 100px;
-    margin-left: 60px;
-    margin-top: 10px;" /> -->
-          <!--This is light logo text-->
-          <img src="{{url('')}}/public/images/eliteadmin-text-dark.png" alt="home" class="light-logo" />
-        </span>
-        </a>
+      <p class="text-center" style="padding-top:20px;font-weight:bold">AUTO EO</p>
       </div>
 
       <ul class="nav navbar-top-links navbar-left hidden-xs">
@@ -78,12 +68,11 @@
   </nav>
 
       @include('layouts.sidebar')
-
-
   <!-- Page Content -->
   <div id="page-wrapper" >
     <div class="container-fluid">
       <!-- .row -->
+
         @yield('content')
 
     <footer class="footer text-center"> 2020 &copy; Admin  </footer>
@@ -111,6 +100,8 @@
 <!--Wave Effects -->
 <script src="{{url('')}}/public/js/waves.js"></script>
 <!-- Custom Theme JavaScript -->
+<script src="{{url('')}}/public/plugins/sweetalert/sweetalert.min.js"></script>
+<script src="{{url('')}}/public/plugins/sweetalert/jquery.sweet-alert.custom.js"></script>
 <script src="{{url('')}}/public/js/custom.min.js"></script>
 
  <script src="{{url('')}}/public/plugins/datatables/jquery.dataTables.min.js"></script>
@@ -128,17 +119,15 @@
 <script type="text/javascript" src="{{url('')}}/public/plugins/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
 <script type="text/javascript" src="{{url('')}}/public/plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
 <script src="{{url('')}}/public/plugins/summernote/dist/summernote.min.js"></script>
-
 <script src="{{url('')}}/public/plugins/icheck/icheck.min.js"></script>
 <script src="{{url('')}}/public/plugins/icheck/icheck.init.js"></script>
-
 <script src="{{url('')}}/public/js/cbpFWTabs.js"></script>
-
 <script type="text/javascript" src="{{url('')}}/public/js/dataTables.buttons.min.js"></script>
 <script type="text/javascript" src="{{url('')}}/public/js/jszip.min.js"></script>
 <script type="text/javascript" src="{{url('')}}/public/js/buttons.html5.min.js"></script>
 <script type="text/javascript" src="{{url('')}}/public/plugins/bootstrap-switch/bootstrap-switch.min.js"></script>
-
+<script src="{{url('')}}/public/js/sweetalert2.all.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 
 </body>
