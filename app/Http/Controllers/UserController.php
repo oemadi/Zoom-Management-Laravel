@@ -110,7 +110,7 @@ class UserController extends Controller
     public function checkvalidasi(request $request, $id)
     {
         check_vlidasi($request,$id);
-        session()->flash('succes','Succes Data Check validasi');
+        session()->flash('succes','Silahkan cek Email Anda');
         return redirect('login');
     }
 
