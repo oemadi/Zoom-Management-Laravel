@@ -52,7 +52,7 @@ class LoginController extends Controller
          // $users_email = $users->email;
 
          if (empty($users)) {
-         session()->flash('ckosong','user atau email salah');
+         session()->flash('ckosong','user atau email salah / Akun Belum Terverivikasi Mohon cek Email Anda!');
          return view('auth.login');
          }
 

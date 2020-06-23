@@ -13,10 +13,10 @@ class UserController extends Controller
      *
      * @return void
      */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
+    // public function __construct()
+    // {
+    //     $this->middleware('auth');
+    // }
 
     /**
      * Show the application dashboard.
@@ -107,11 +107,5 @@ class UserController extends Controller
         return view('user.list');
     }
 
-    public function checkvalidasi(request $request, $id)
-    {
-        check_vlidasi($request,$id);
-        session()->flash('succes','Silahkan cek Email Anda');
-        return redirect('login');
-    }
 
 }

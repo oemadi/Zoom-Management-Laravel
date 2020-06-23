@@ -10,7 +10,11 @@
 
 <body>
     HALOO   {{ $user->name }}
-   <p> <a href="https://automataseminar.com/zoom/user/check/{{$user->id}}">Mohon klik link ini !</a></p>
+<!--    <p> <a href="http://localhost/zoomweb/user/check/{{$user->id}}">Mohon klik link ini !</a></p>
+ -->
+ <p> <a href="https://automataseminar.com/zoom/validasi/{{$user->id}}">Mohon klik link ini !</a></p>
+
+
 </body>
 
 </html>
