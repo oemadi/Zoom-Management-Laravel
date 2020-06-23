@@ -45,7 +45,7 @@
     </div>
      <div class="form-group ">
        <div class="col-xs-12">
-         <input  autocomplete="off"  id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" placeholder="Masukkan Password" name="password" required>
+         <input  autocomplete="off"  id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" placeholder="Masukkan 8 digit Nik/Nip dari pertama" name="password" required>
             @if ($errors->has('password'))
              <span class="invalid-feedback" role="alert">
              <strong>{{ $errors->first('password') }}</strong>
