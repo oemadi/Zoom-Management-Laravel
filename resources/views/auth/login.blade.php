@@ -31,6 +31,12 @@
 <div class="panel-wrapper collapse in" aria-expanded="true">
 <div class="panel-body">
             <div class="box-body">
+             @if (Session::has('ckosong'))
+              <div class="alert alert-danger alert-dismissable">{{ Session::get('ckosong') }}
+              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+              </div>
+             @endif
+            </div><div class="box-body">
              @if (Session::has('gagal'))
               <div class="alert alert-danger alert-dismissable">{{ Session::get('gagal') }}
               <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>

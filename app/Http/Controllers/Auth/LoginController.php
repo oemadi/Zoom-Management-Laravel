@@ -48,11 +48,17 @@ class LoginController extends Controller
          $email = $request->email;
          $users =  \App\Models\User::where('email',$email)->first();
          $users = json_decode($users);
-         $users_status = $users->status;
+         // $users_status = $users->status;
+         // $users_email = $users->email;
 
-        if ($users_status == 0)
+         if (empty($users)) {
+         session()->flash('ckosong','user atau email salah');
+         return view('auth.login');
+         }
+
+        if ($users->status == 0)
         {
-        session()->flash('check','Akun Belum Terverivikasi Mohon cek Email Anda!');
+        session()->flash('check','user atau email salah / Akun Belum Terverivikasi Mohon cek Email Anda!');
         return view('auth.login');
 
         }
