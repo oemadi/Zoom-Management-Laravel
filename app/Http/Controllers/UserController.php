@@ -1,12 +1,10 @@
 <?php
-
 namespace App\Http\Controllers;
-
 
 use Illuminate\Http\Request;
 use App\Models\Event;
 use App\Models\user;
-
+use Session;
 
 class UserController extends Controller
 {
@@ -66,7 +64,6 @@ class UserController extends Controller
                               compact('data', 'page','limit'))->render(),
                   ];
 
-
             break;
             case "1":
                 $offset ='';
@@ -89,30 +86,32 @@ class UserController extends Controller
                 }
 
               $data = [
-
-                    'opt' => array('total' => $result_total ,'limit' =>$lmt,'page' =>$offset,'pages' =>  $pages ),
-                ];
+                        'opt' => array('total' => $result_total ,'limit' =>$lmt,'page' =>$offset,'pages' =>  $pages ),
+                      ];
 
                 $data = json_decode(json_encode($data));
 
                 $opt = $data->opt;
 
-                 $data  = [
+                $data  = [
                               "view2" => view('ajax.ajax_pagination',
                               compact('data', 'opt', 'page','halaman','limit'))->render(),
-
-                  ];
-
+                          ];
               break;
-
-        }
+            }
               if ($request->ajax()) {
 
               return response()->json($data);
               }
 
-
         return view('user.list');
+    }
+
+    public function checkvalidasi(request $request, $id)
+    {
+        check_vlidasi($request,$id);
+        session()->flash('succes','Succes Data Check validasi');
+        return redirect('login');
     }
 
 }

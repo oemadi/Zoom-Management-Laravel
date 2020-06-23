@@ -31,7 +31,7 @@ class SertifikatController extends Controller
 
       $start='';
       if($request->start_date == null ){
-        $start = date ("Y-m-d").' '.'00:00:00'; }else{
+        $start =  "0000-00-00"; }else{
         $start_date_explode = explode('/',$request->start_date);
         $bln = $start_date_explode[0];
         $tgl = $start_date_explode[1];
@@ -41,7 +41,7 @@ class SertifikatController extends Controller
 
      $end='';
      if($request->end_date == null ){
-       $end = date ("Y-m-d").' '.'23:59:59'; }else{
+       $end =  "0000-00-00"; }else{
        $end_date_explode = explode('/',$request->end_date);
        $bln = $end_date_explode[0];
        $tgl = $end_date_explode[1];

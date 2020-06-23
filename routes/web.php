@@ -11,6 +11,15 @@
 |
 */
 
+// Route::get('HDTutoMail', function () {
+
+//     $user = \App\Models\User::find(5);
+
+//     Mail::to($user->email)->send(new \App\Mail\HDTutoMail($user));
+
+//     dd("Email is Send.");
+
+// });
 
 Route::get('/', function () {
 
@@ -40,6 +49,8 @@ Route::any('/join/event', 'JoineventController@index')->name('join_event');
 Route::get('/join/download', 'JoineventController@download')->name('join_report');
 // Route::get('/join/download/{id}', 'JoineventController@download')->name('join_report');
 Route::any('/list/user', 'UserController@index')->name('list_user');
+Route::any('/user/check/{id}', 'UserController@checkvalidasi')->name('check_validasi');
+
 Route::any('/list/sertifikat', 'SertifikatController@index')->name('list_sertifikat');
 Route::any('/sertifikat/add', 'SertifikatController@add')->name('add_sertifikat');
 Route::any('/sertifikat/store', 'SertifikatController@store')->name('store_sertifikat');

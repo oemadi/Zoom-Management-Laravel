@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\DB;
+use App\Models\User;
 use App\Models\Sertifikat;
 use Carbon\Carbon;
 /**
@@ -106,5 +107,25 @@ if (!function_exists('update_sertifikat')) {
           $data_update->image   = $cover;
           $data_update->status = 5;
           $data_update->save();
+    }
+}
+if (!function_exists('check_register')) {
+    function check_register($user)
+    {
+          $user = json_decode($user);
+          // dd($user,$user->id,$user->id);
+          $user = \App\Models\User::find($user->id);
+          Mail::to($user->email)->send(new \App\Mail\HDTutoMail($user));
+          session()->flash('succes','Silahkan cek email Anda');
+          return redirect('login');
+    }
+}
+
+if (!function_exists('check_vlidasi')) {
+    function check_vlidasi($user,$id)
+    {
+          $data_check = User::where('id',$id)->first();
+          $data_check->status = 1;
+          $data_check->save();;
     }
 }
