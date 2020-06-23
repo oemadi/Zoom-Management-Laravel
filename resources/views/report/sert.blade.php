@@ -16,11 +16,11 @@
 
 
 <div id="content">
-<p id="judul">Sertifikat</p>
-<p id="judul2">Diberikan kepada :</p>
-<p id="judul3">{{$nama}}</p>
-<p id="judul4">{{$event}}</p>
-<p id="judul5">{{$pt}}</p>
+<!--- <p id="judul">Sertifikat</p> --->
+<!--- <p id="judul2">Diberikan kepada :</p> --->
+<p style="margin-top:320px" class="mentho" id="judul3">{{$nama}}</p>
+<!--- <p id="judul4">{{$event}}</p>--->
+<!--- <p id="judul5">{{$pt}}</p>--->
 </div>
 <!-- DIV sebagai pengatur jarak -->
 <div id="clear" style="display:block;height:160px;clear:both;"> </div>

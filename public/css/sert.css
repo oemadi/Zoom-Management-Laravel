@@ -55,9 +55,18 @@ html,body{
   width: 1112px;
   border: 3px solid green;
   padding: 10px;
-	background-image:url("https://oemadi.web.id/pemeliharaan/uploads/sertifikat55.jpg");
+	background-image:url("https://automatawebinar.com/zoom/public/images/sertifikat/43902-2020-06-24-01-55-51.png");
     height:780px;
 
 	   background-repeat: no-repeat;
 
 }
+
+   @font-face {
+         font-family: "Font Retrow Mentho";
+         src: url('https://automatawebinar.com/zoom/public/fonts/Retrow-Mentho.ttf');
+         }
+ 
+   .mentho {
+         font-family: "Font Retrow Mentho";
+         }
