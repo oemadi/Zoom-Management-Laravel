@@ -4,17 +4,14 @@
 
 <head>
 
-    <title>HDTutoMail</title>
+    <title>Automataseminar</title>
 
 </head>
 
 <body>
-
-    <h1>Terimakasih anda telah bergabung </h1>
-    <p>haloo {{ $user->name }}</p>
+    Terimakasih anda telah bergabung {{ $user->name }}
     <h1>Mohon klik link di bawah ini !</h1>
-    <a href="https://automataseminar.com/zoom/user/check/{{$user->id}}">
-
+   <p> <a href="https://automataseminar.com/zoom/user/check/{{$user->id}}"></a></p>
 </body>
 
 </html>
