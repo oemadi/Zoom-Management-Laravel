@@ -26,39 +26,9 @@
             </div>
           </div>
         </div>
-        <div class="col-md-3 col-sm-6">
-          <div class="white-box">
-            <div class="r-icon-stats">
-              <i class="ti-user bg-danger"></i>
-              <div class="bodystate">
-                <h4></h4>
-                <span class="text-muted"></span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <div class="white-box">
-            <div class="r-icon-stats">
-              <i class="ti-user bg-danger"></i>
-              <div class="bodystate">
-                <h4></h4>
-                <span class="text-muted"></span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <div class="white-box">
-            <div class="r-icon-stats">
-              <i class="ti-user bg-danger"></i>
-              <div class="bodystate">
-                <h4></h4>
-                <span class="text-muted"></span>
-              </div>
-            </div>
-          </div>
-        </div>
+       
+        
+        
       </div>
       <!--/row -->
       <!--row -->
