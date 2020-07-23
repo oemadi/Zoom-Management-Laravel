@@ -64,7 +64,7 @@
             <li> <a href="{{route('join_event')}}">List Join Event</a></li>
           </ul>
         </li>
-          
+
         <li><a href="{{ __('Logout')}}" class="waves-effect"><i class="linea-icon linea-basic fa-fw" data-icon="v"></i> <span class="hide-menu"> Logout </span></a></li>
         </ul>
         @else
