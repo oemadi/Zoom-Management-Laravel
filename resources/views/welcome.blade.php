@@ -22,7 +22,7 @@
 
 <body>
     <header>
-            <h1>AUTOMATA WEBINAR MASTER</h1>
+            <h1>AUTOMATA WEBINAR Develop</h1>
     </header>
 
     <content>
