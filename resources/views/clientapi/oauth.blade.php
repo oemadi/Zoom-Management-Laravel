@@ -27,7 +27,8 @@
                     $a=env('CLIENT_ID_ZOOM');
                     $b=env('REDIRECT_URL_OAUTH_ZOOM');
                     $c= $a."&redirect_uri=".$b;
-                      $url = "https://zoom.us/oauth/authorize?response_type=code&client_id=".$c;
+                     // $url = "https://zoom.us/oauth/authorize?response_type=code&client_id=".$c;
+					  $url = "https://zoom.us/oauth/authorize?response_type=code&client_id=".$c;
                     ?>
                     <button class="btn btn-info waves-effect waves-light m-r-10"><a href="<?php echo $url; ?>">GET OAUTH</a></button>
 
