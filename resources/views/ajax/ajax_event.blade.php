@@ -30,10 +30,17 @@
 
 						<td>
 						<a target="_blank" href="{{ url($key->url_event) }}" class="btn btn-info">Join</a> |
+<<<<<<< HEAD
 <!--                         <a href="{{ route('join_report', $key->id) }}" class="btn btn-info">Sertifikat</a></td>
  -->
                         <a target="_blank" href="{{ url('/join/download') }}" class="btn btn-info">Sertifikat</a>
 
+=======
+                        <a href="{{ route('join_report_pdf', $key->id) }}" class="btn btn-info">Pdf</a></td>
+
+<!--                         <a target="_blank" href="{{ url('/join/download') }}" class="btn btn-info">Sertifikat</a>
+ -->
+>>>>>>> 81e2a8088923e12142692814006d03869ed27ea5
 </td>
                      </tr>
                 @endforeach
@@ -41,7 +48,11 @@
                     <tr>
                         <td colspan="12">
                             <div style="display: table;height: 250px;width: 100%;">
+<<<<<<< HEAD
                                 <h3 style="display: table-cell;vertical-align: middle;text-align: center;" class="hobby_travel-color">Not Found! </h3>
+=======
+                                <h3 style="display: table-cell;vertical-align: middle;text-align: center;" class="hobby_travel-color">Data Kosong! </h3>
+>>>>>>> 81e2a8088923e12142692814006d03869ed27ea5
                             </div>
                         </td>
                     </tr>

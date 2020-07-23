@@ -22,7 +22,11 @@
 
 <body>
     <header>
+<<<<<<< HEAD
             <h1>AUTOMATA WEBINAR</h1>
+=======
+            <h1>AUTOMATA WEBINAR MASTER</h1>
+>>>>>>> 81e2a8088923e12142692814006d03869ed27ea5
     </header>
 
     <content>

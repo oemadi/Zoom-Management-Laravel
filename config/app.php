@@ -160,6 +160,14 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         App\Providers\HelperServiceProvider::class,
+<<<<<<< HEAD
+=======
+            Barryvdh\DomPDF\ServiceProvider::class,
+
+
+
+
+>>>>>>> 81e2a8088923e12142692814006d03869ed27ea5
     ],
 
     /*
@@ -209,6 +217,10 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Helper' => App\Helpers\Helper::class,
+<<<<<<< HEAD
+=======
+            'PDF' => Barryvdh\DomPDF\Facade::class,
+>>>>>>> 81e2a8088923e12142692814006d03869ed27ea5
 
     ],
 

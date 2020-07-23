@@ -50,7 +50,11 @@
                     <tr>
                         <td colspan="12">
                             <div style="display: table;height: 250px;width: 100%;">
+<<<<<<< HEAD
                                 <h3 style="display: table-cell;vertical-align: middle;text-align: center;" class="hobby_travel-color">Not Found! </h3>
+=======
+                                <h3 style="display: table-cell;vertical-align: middle;text-align: center;" class="hobby_travel-color">Data Kosong!</h3>
+>>>>>>> 81e2a8088923e12142692814006d03869ed27ea5
                             </div>
                         </td>
                     </tr>

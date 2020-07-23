@@ -7,7 +7,11 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="icon" type="image/png" sizes="16x16" href="{{asset('public/images/favicon.png')}}">
+<<<<<<< HEAD
 <title>Daftar</title>
+=======
+<title>SELAMAT DATANG</title>
+>>>>>>> 81e2a8088923e12142692814006d03869ed27ea5
   <!-- CSRF Token -->
 <meta name="csrf-token" content="{{ csrf_token() }}">
 <!-- Bootstrap Core CSS -->
@@ -30,6 +34,7 @@
 <div class="panel-heading" style="text-align: center;">Login</div>
 <div class="panel-wrapper collapse in" aria-expanded="true">
 <div class="panel-body">
+<<<<<<< HEAD
             <div class="box-body">
              @if (Session::has('ckosong'))
               <div class="alert alert-danger alert-dismissable">{{ Session::get('ckosong') }}
@@ -58,21 +63,33 @@
                </div>
              @endif
             </div>
+=======
+
+>>>>>>> 81e2a8088923e12142692814006d03869ed27ea5
 <form method="POST" action="{{ route('login') }}" aria-label="{{ __('Login') }}" class="form-horizontal form-material">
  @csrf
     <div class="form-group ">
       <div class="col-xs-12">
+<<<<<<< HEAD
        <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" placeholder="Masukkan Email"  required autofocus>
             @if ($errors->has('email'))
+=======
+       <input id="nik" type="nik" class="form-control{{ $errors->has('nik') ? ' is-invalid' : '' }}" name="nik" value="{{ old('nik') }}" placeholder="Masukkan Nik"  required autofocus>
+            @if ($errors->has('nik'))
+>>>>>>> 81e2a8088923e12142692814006d03869ed27ea5
              <span class="invalid-feedback" role="alert">
-             {{ $errors->first('email') }}
+             {{ $errors->first('nik') }}
              </span>
             @endif
       </div>
     </div>
      <div class="form-group ">
        <div class="col-xs-12">
+<<<<<<< HEAD
          <input  autocomplete="off"  id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" placeholder="Masukkan Password" name="password" required>
+=======
+         <input  autocomplete="off"  id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" placeholder="Masukkan 8 digit Nik/Nip dari pertama" name="password" required>
+>>>>>>> 81e2a8088923e12142692814006d03869ed27ea5
             @if ($errors->has('password'))
              <span class="invalid-feedback" role="alert">
              <strong>{{ $errors->first('password') }}</strong>

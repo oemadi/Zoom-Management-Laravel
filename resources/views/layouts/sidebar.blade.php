@@ -46,6 +46,15 @@
             <li> <a href="{{route('oauth')}}">Get Token OAuth</a></li>
           </ul>
         </li>
+<<<<<<< HEAD
+=======
+		<li><a href="javascript:void(0);" class="waves-effect"><i data-icon="F" class="linea-icon linea-software fa-fw"></i> <span class="hide-menu">Sertifikat<span class="fa arrow"></span></span></a>
+          <ul class="nav nav-second-level">
+            <li> <a href="{{route('add_sertifikat')}}">Create Sertifikat</a></li>
+            <li> <a href="{{route('list_sertifikat')}}">List Sertifikat</a></li>
+          </ul>
+        </li>
+>>>>>>> 81e2a8088923e12142692814006d03869ed27ea5
         <li><a href="javascript:void(0);" class="waves-effect"><i data-icon="F" class="linea-icon linea-software fa-fw"></i> <span class="hide-menu">Jadwal<span class="fa arrow"></span></span></a>
           <ul class="nav nav-second-level">
             <li> <a href="{{route('meeting_create')}}">Create Meeting</a></li>
@@ -56,6 +65,7 @@
           <ul class="nav nav-second-level">
             <li> <a href="{{route('join_add')}}">Create Join Event</a></li>
             <li> <a href="{{route('join_event')}}">List Join Event</a></li>
+<<<<<<< HEAD
           </ul>
         </li>
           <li><a href="javascript:void(0);" class="waves-effect"><i data-icon="F" class="linea-icon linea-software fa-fw"></i> <span class="hide-menu">Sertifikat<span class="fa arrow"></span></span></a>
@@ -69,6 +79,12 @@
             <li> <a href="#">Report Peserta</a></li>
           </ul>
         </li>
+=======
+          </ul>
+        </li>
+
+        <li><a href="{{ __('Logout')}}" class="waves-effect"><i class="linea-icon linea-basic fa-fw" data-icon="v"></i> <span class="hide-menu"> Logout </span></a></li>
+>>>>>>> 81e2a8088923e12142692814006d03869ed27ea5
         </ul>
         @else
               <ul class="nav" id="side-menu">
@@ -85,8 +101,13 @@
         <li> <a href="{{ route('home')}}" class="waves-effect active"><i class="linea-icon linea-basic fa-fw" data-icon="v"></i> <span class="hide-menu"> Dashboard </span></a></li>
              <li><a href="javascript:void(0);" class="waves-effect"><i data-icon="F" class="linea-icon linea-software fa-fw"></i> <span class="hide-menu">Join<span class="fa arrow"></span></span></a>
           <ul class="nav nav-second-level">
+<<<<<<< HEAD
             <li> <a href="{{route('join_add')}}">Create Join Event</a></li>
             <li> <a href="{{route('join_event')}}">List Join Event</a></li>
+=======
+            <!--- <li> <a href="{{route('join_add')}}">Create Join Event</a></li> --->
+            <li> <a href="{{route('join_event')}}">List Join Event 123</a></li>
+>>>>>>> 81e2a8088923e12142692814006d03869ed27ea5
           </ul>
         </li>
         </ul>

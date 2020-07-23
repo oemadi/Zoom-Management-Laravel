@@ -2,7 +2,11 @@ html,body{
 	/*Hilangkan white space pada browser*/
 	margin:0 0 0 0;
 	padding:0 0 0 0;
+<<<<<<< HEAD
 	
+=======
+
+>>>>>>> 81e2a8088923e12142692814006d03869ed27ea5
 	width:80%;
 	height:auto;
 }
@@ -15,13 +19,18 @@ html,body{
 	z-index:2; /* Header berada 2 tingkat diatas TAG DIV lainnya */
 }
 #judul{
+<<<<<<< HEAD
 	
+=======
+
+>>>>>>> 81e2a8088923e12142692814006d03869ed27ea5
 	position:relative;
 	font-size:42px;
 	text-align:center;
 	margin-top:150px;
 }
 #judul2{
+<<<<<<< HEAD
 	
 	position:relative;
 	font-size:36px;
@@ -61,3 +70,52 @@ html,body{
 	   background-repeat: no-repeat;
 
 }
+=======
+
+	position:relative;
+	font-size:36px;
+	text-align:center;
+
+}
+#judul3{
+
+	position:relative;
+	font-size:36px;
+	text-align:center;
+
+}
+
+#judul4{
+
+	position:relative;
+	font-size:36px;
+	text-align:center;
+
+}
+#judul5{
+
+	position:relative;
+	font-size:36px;
+	text-align:center;
+
+}
+#content{
+	 margin: 2px;
+  width: 1112px;
+  border: 3px solid green;
+  padding: 0px;
+	background-image:url("https://automatawebinar.com/zoom/public/images/sertifikat/43902-2020-06-24-01-55-51.png");
+    height:760px;
+
+	   background-repeat: no-repeat;
+}
+
+   @font-face {
+         font-family: "Font Retrow Mentho";
+         src: url('https://automatawebinar.com/zoom/public/fonts/Retrow-Mentho.ttf');
+         }
+
+   .mentho {
+         font-family: "Font Retrow Mentho";
+         }
+>>>>>>> 81e2a8088923e12142692814006d03869ed27ea5

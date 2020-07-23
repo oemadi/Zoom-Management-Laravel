@@ -33,6 +33,11 @@ Route::get('/', function () {
 Route::get('/oauth', 'CallbackController@getOauth')->name('oauth');
 Route::get('/callback', 'CallbackController@index')->name('call');
 Route::get('/validasi/{id}', 'CekValidasiController@index')->name('valid');
+<<<<<<< HEAD
+=======
+// Route::get('/valid', 'CekValidasiController@ceklogin')->name('check_login');
+// Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
+>>>>>>> 81e2a8088923e12142692814006d03869ed27ea5
 
 Auth::routes();
 
@@ -49,6 +54,10 @@ Route::post('/join/save', 'JoineventController@save')->name('join_save');
 Route::any('/join/event', 'JoineventController@index')->name('join_event');
 Route::get('/join/download', 'JoineventController@download')->name('join_report');
 // Route::get('/join/download/{id}', 'JoineventController@download')->name('join_report');
+<<<<<<< HEAD
+=======
+Route::get('/join/pdf/{id}', 'JoineventController@pdf')->name('join_report_pdf');
+>>>>>>> 81e2a8088923e12142692814006d03869ed27ea5
 Route::any('/list/user', 'UserController@index')->name('list_user');
 Route::any('/user/check/{id}', 'UserController@checkvalidasi')->name('check_validasi');
 
