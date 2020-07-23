@@ -82,8 +82,8 @@
         <li> <a href="{{ route('home')}}" class="waves-effect active"><i class="linea-icon linea-basic fa-fw" data-icon="v"></i> <span class="hide-menu"> Dashboard </span></a></li>
              <li><a href="javascript:void(0);" class="waves-effect"><i data-icon="F" class="linea-icon linea-software fa-fw"></i> <span class="hide-menu">Join<span class="fa arrow"></span></span></a>
           <ul class="nav nav-second-level">
-            <li> <a href="{{route('join_add')}}">Create Join Event</a></li>
-            <li> <a href="{{route('join_event')}}">List Join Event</a></li>
+            <!--- <li> <a href="{{route('join_add')}}">Create Join Event</a></li> --->
+            <li> <a href="{{route('join_event')}}">List Join Event 123</a></li>
           </ul>
         </li>
         </ul>
